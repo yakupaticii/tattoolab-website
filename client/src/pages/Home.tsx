@@ -30,6 +30,9 @@ export default function Home() {
             <Link href="/privacy" className="text-sm hover:text-accent transition-colors">Privacy</Link>
             <Link href="/terms" className="text-sm hover:text-accent transition-colors">Terms</Link>
             <Link href="/support" className="text-sm hover:text-accent transition-colors">Support</Link>
+            <Link href="/auth">
+              <Button variant="outline" className="border-accent/30 hover:bg-accent/10">Sign In</Button>
+            </Link>
           </div>
         </div>
       </nav>
@@ -38,7 +41,7 @@ export default function Home() {
       <section className="relative py-16 md:py-32 px-4 overflow-hidden">
         {/* Decorative background element */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl -z-10"></div>
-        
+
         <div className="container max-w-4xl mx-auto text-center">
           <div className="mb-8 inline-block">
             <div className="px-4 py-2 rounded-full bg-card border border-accent/30 text-sm text-accent font-medium">
@@ -97,48 +100,56 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-6 md:gap-8">
             {/* Feature 1: Design Studio */}
-            <Card className="p-8 bg-background border-border/50 hover:border-accent/30 transition-all duration-300 hover:shadow-lg hover:shadow-accent/10">
-              <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center mb-4">
-                <Sparkles className="w-6 h-6 text-accent" />
-              </div>
-              <h3 className="font-display text-2xl font-bold mb-3">Design Studio</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Create stunning tattoo designs with AI assistance. Explore unlimited variations and refine your ideas until they're perfect.
-              </p>
-            </Card>
+            <Link href="/design">
+              <Card className="p-8 h-full bg-background border-border/50 hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/10 cursor-pointer group">
+                <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <Sparkles className="w-6 h-6 text-accent" />
+                </div>
+                <h3 className="font-display text-2xl font-bold mb-3 group-hover:text-accent transition-colors">Design Studio</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Create stunning tattoo designs with AI assistance. Explore unlimited variations and refine your ideas until they're perfect.
+                </p>
+              </Card>
+            </Link>
 
             {/* Feature 2: Aging Simulator */}
-            <Card className="p-8 bg-background border-border/50 hover:border-accent/30 transition-all duration-300 hover:shadow-lg hover:shadow-accent/10">
-              <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center mb-4">
-                <Clock className="w-6 h-6 text-accent" />
-              </div>
-              <h3 className="font-display text-2xl font-bold mb-3">Aging Simulator</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                See how your tattoo will look over time. Our AI predicts aging patterns to help you make informed design choices.
-              </p>
-            </Card>
+            <Link href="/aging">
+              <Card className="p-8 h-full bg-background border-border/50 hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/10 cursor-pointer group">
+                <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <Clock className="w-6 h-6 text-accent" />
+                </div>
+                <h3 className="font-display text-2xl font-bold mb-3 group-hover:text-accent transition-colors">Aging Simulator</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  See how your tattoo will look over time. Our AI predicts aging patterns to help you make informed design choices.
+                </p>
+              </Card>
+            </Link>
 
             {/* Feature 3: Cover-Up Advisor */}
-            <Card className="p-8 bg-background border-border/50 hover:border-accent/30 transition-all duration-300 hover:shadow-lg hover:shadow-accent/10">
-              <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center mb-4">
-                <Shield className="w-6 h-6 text-accent" />
-              </div>
-              <h3 className="font-display text-2xl font-bold mb-3">Cover-Up Advisor</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Get expert recommendations for covering up existing tattoos. Our AI analyzes your current design and suggests creative solutions.
-              </p>
-            </Card>
+            <Link href="/cover-up">
+              <Card className="p-8 h-full bg-background border-border/50 hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/10 cursor-pointer group">
+                <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <Shield className="w-6 h-6 text-accent" />
+                </div>
+                <h3 className="font-display text-2xl font-bold mb-3 group-hover:text-accent transition-colors">Cover-Up Advisor</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Get expert recommendations for covering up existing tattoos. Our AI analyzes your current design and suggests creative solutions.
+                </p>
+              </Card>
+            </Link>
 
             {/* Feature 4: TattooCare */}
-            <Card className="p-8 bg-background border-border/50 hover:border-accent/30 transition-all duration-300 hover:shadow-lg hover:shadow-accent/10">
-              <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center mb-4">
-                <Smartphone className="w-6 h-6 text-accent" />
-              </div>
-              <h3 className="font-display text-2xl font-bold mb-3">TattooCare</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Professional aftercare guidance and tips to keep your tattoo looking fresh. Follow personalized care routines for optimal results.
-              </p>
-            </Card>
+            <Link href="/care">
+              <Card className="p-8 h-full bg-background border-border/50 hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/10 cursor-pointer group">
+                <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <Smartphone className="w-6 h-6 text-accent" />
+                </div>
+                <h3 className="font-display text-2xl font-bold mb-3 group-hover:text-accent transition-colors">TattooCare</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Professional aftercare guidance and tips to keep your tattoo looking fresh. Follow personalized care routines for optimal results.
+                </p>
+              </Card>
+            </Link>
           </div>
         </div>
       </section>
