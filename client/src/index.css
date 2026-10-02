@@ -1,14 +1,14 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-/* Google Fonts - Premium Typography */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap');
+/* Google Fonts — same faces as the iOS app */
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@800;900&family=Urbanist:wght@400;500;600;700&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@500&display=swap');
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-sans: 'Poppins', sans-serif;
-  --font-display: 'Playfair Display', serif;
+  --font-sans: 'Urbanist', system-ui, sans-serif;
+  --font-display: 'Urbanist', system-ui, sans-serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -49,8 +49,8 @@
 
 :root {
   /* TattooLab Premium Dark Theme */
-  --primary: oklch(0.65 0.2 50);  /* Warm Gold */
-  --primary-foreground: oklch(0.95 0.01 0);  /* Off-white */
+  --primary: #FF5E1A;  /* Warm Gold */
+  --primary-foreground: #121212;  /* Off-white */
   --sidebar-primary: oklch(0.65 0.2 50);
   --sidebar-primary-foreground: oklch(0.95 0.01 0);
   --chart-1: oklch(0.65 0.2 50);
@@ -59,23 +59,23 @@
   --chart-4: oklch(0.65 0.2 50);
   --chart-5: oklch(0.55 0.18 45);
   --radius: 0.75rem;
-  --background: oklch(0.08 0.01 280);  /* Deep dark */
-  --foreground: oklch(0.94 0.01 0);  /* Cream */
-  --card: oklch(0.12 0.015 280);  /* Slightly lighter dark */
-  --card-foreground: oklch(0.94 0.01 0);
-  --popover: oklch(0.12 0.015 280);
-  --popover-foreground: oklch(0.94 0.01 0);
-  --secondary: oklch(0.65 0.2 50);  /* Gold accent */
-  --secondary-foreground: oklch(0.08 0.01 280);
-  --muted: oklch(0.25 0.02 280);
-  --muted-foreground: oklch(0.65 0.05 0);
-  --accent: oklch(0.65 0.2 50);  /* Gold */
-  --accent-foreground: oklch(0.08 0.01 280);
+  --background: #121212;
+  --foreground: #ffffff;
+  --card: #1C1C1C;
+  --card-foreground: #ffffff;
+  --popover: #1C1C1C;
+  --popover-foreground: #ffffff;
+  --secondary: #2E2E2E;
+  --secondary-foreground: #ffffff;
+  --muted: #252525;
+  --muted-foreground: #A39A94;
+  --accent: #FF5E1A;
+  --accent-foreground: #121212;
   --destructive: oklch(0.6 0.2 20);  /* Warm red */
   --destructive-foreground: oklch(0.95 0.01 0);
-  --border: oklch(0.2 0.02 280);
-  --input: oklch(0.15 0.015 280);
-  --ring: oklch(0.65 0.2 50);
+  --border: #2A2A2A;
+  --input: #1C1C1C;
+  --ring: #FF5E1A;
   --sidebar: oklch(0.12 0.015 280);
   --sidebar-foreground: oklch(0.94 0.01 0);
   --sidebar-accent: oklch(0.65 0.2 50);
@@ -86,27 +86,27 @@
 
 .dark {
   /* Dark theme is default for TattooLab */
-  --primary: oklch(0.65 0.2 50);
-  --primary-foreground: oklch(0.95 0.01 0);
+  --primary: #FF5E1A;
+  --primary-foreground: #121212;
   --sidebar-primary: oklch(0.65 0.2 50);
   --sidebar-primary-foreground: oklch(0.95 0.01 0);
-  --background: oklch(0.08 0.01 280);
-  --foreground: oklch(0.94 0.01 0);
-  --card: oklch(0.12 0.015 280);
-  --card-foreground: oklch(0.94 0.01 0);
-  --popover: oklch(0.12 0.015 280);
-  --popover-foreground: oklch(0.94 0.01 0);
-  --secondary: oklch(0.65 0.2 50);
-  --secondary-foreground: oklch(0.08 0.01 280);
-  --muted: oklch(0.25 0.02 280);
-  --muted-foreground: oklch(0.65 0.05 0);
-  --accent: oklch(0.65 0.2 50);
-  --accent-foreground: oklch(0.08 0.01 280);
+  --background: #121212;
+  --foreground: #ffffff;
+  --card: #1C1C1C;
+  --card-foreground: #ffffff;
+  --popover: #1C1C1C;
+  --popover-foreground: #ffffff;
+  --secondary: #2E2E2E;
+  --secondary-foreground: #ffffff;
+  --muted: #252525;
+  --muted-foreground: #A39A94;
+  --accent: #FF5E1A;
+  --accent-foreground: #121212;
   --destructive: oklch(0.6 0.2 20);
   --destructive-foreground: oklch(0.95 0.01 0);
-  --border: oklch(0.2 0.02 280);
-  --input: oklch(0.15 0.015 280);
-  --ring: oklch(0.65 0.2 50);
+  --border: #2A2A2A;
+  --input: #1C1C1C;
+  --ring: #FF5E1A;
   --chart-1: oklch(0.65 0.2 50);
   --chart-2: oklch(0.55 0.18 45);
   --chart-3: oklch(0.75 0.15 55);
@@ -197,3 +197,23 @@
     }
   }
 }
+
+/* Landing page */
+html { scroll-behavior: smooth; }
+::selection { background: #FF5E1A; color: #121212; }
+*:focus-visible { outline: 2px solid #FF5E1A; outline-offset: 3px; border-radius: 12px; }
+.tl-handle:focus-visible { outline: 3px solid #fff; outline-offset: 4px; border-radius: 50%; }
+/* Copy outside the hero/CTA is English: let each text block pick its own direction in RTL so punctuation stays put. */
+[dir="rtl"] :is(h1, h2, h3, p, li, figcaption, button, span) { unicode-bidi: plaintext; }
+@keyframes tlBlink { 50% { opacity: 0; } }
+/* Off-screen above the page (not to the side) so RTL layouts get no horizontal overflow. */
+.tl-skip { position: absolute; inset-inline-start: 16px; top: 8px; z-index: 50; background: #fff; color: #121212; padding: 10px 16px; border-radius: 999px; transform: translateY(-200%); }
+.tl-skip:focus { transform: none; }
+.tl-cta-pill { background: #FF5E1A; color: #121212; font-weight: 700; font-size: 14px; padding: 10px 18px; border-radius: 999px; white-space: nowrap; transition: background 200ms ease; }
+.tl-cta-pill:hover { background: #FF7A3D; }
+.tl-footer-link:hover { color: #fff !important; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+

@@ -8,22 +8,12 @@ import Home from "./pages/Home";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import Support from "./pages/Support";
-import DesignStudio from "./pages/DesignStudio";
-import AgingSimulator from "./pages/AgingSimulator";
-import CoverUpAdvisor from "./pages/CoverUpAdvisor";
-import TattooCare from "./pages/TattooCare";
-import Auth from "./pages/Auth";
 
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
-      <Route path="/design" component={DesignStudio} />
-      <Route path="/aging" component={AgingSimulator} />
-      <Route path="/cover-up" component={CoverUpAdvisor} />
-      <Route path="/care" component={TattooCare} />
-      <Route path="/auth" component={Auth} />
       <Route path="/privacy" component={Privacy} />
       <Route path="/terms" component={Terms} />
       <Route path="/support" component={Support} />

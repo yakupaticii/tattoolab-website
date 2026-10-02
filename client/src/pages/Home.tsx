@@ -1,247 +1,384 @@
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import { Smartphone, Sparkles, Clock, Shield, Mail } from "lucide-react";
+import { useEffect, useState, type CSSProperties, type ReactNode } from "react";
 import { Link } from "wouter";
+import AgeSection from "@/components/landing/AgeSection";
+import HealSection from "@/components/landing/HealSection";
+import IdeaSection from "@/components/landing/IdeaSection";
+import { FAQS, LANGS, SUPPORT_EMAIL, T, type Lang } from "@/components/landing/content";
+import { AppStoreBadge, C, h2Style, mono, Reveal, sectionInner, Serif, useWide } from "@/components/landing/ui";
 
-/**
- * TattooLab Home Page
- * Premium dark theme with warm gold accents
- * Mobile-first responsive design
- */
+const LANG_KEY = "tattoolab-lang";
+
+function Wordmark({ size }: { size: number }) {
+  return (
+    <span dir="ltr" style={{ fontFamily: "Unbounded, sans-serif", fontWeight: 900, fontSize: size, letterSpacing: "-.02em", display: "flex" }}>
+      <span style={{ color: "#fff" }}>Tattoo</span>
+      <span style={{ color: C.orange }}>Lab</span>
+    </span>
+  );
+}
 
 export default function Home() {
-  const appStoreUrl = "https://apps.apple.com/app/tattoolab/id0000000000";
-  const supportEmail = "support@tattoolab.app";
+  // ?lang=tr links win over the saved choice.
+  const [lang, setLang] = useState<Lang>(() => {
+    if (typeof window === "undefined") return "en";
+    const fromUrl = new URLSearchParams(window.location.search).get("lang");
+    const saved = fromUrl ?? localStorage.getItem(LANG_KEY);
+    return saved && saved in T ? (saved as Lang) : "en";
+  });
+  const [openFaq, setOpenFaq] = useState(0);
+  const wide = useWide();
+  const rtl = lang === "ar";
+  const t = T[lang];
+
+  useEffect(() => {
+    document.documentElement.dir = rtl ? "rtl" : "ltr";
+    document.documentElement.lang = lang;
+    return () => {
+      document.documentElement.dir = "ltr";
+      document.documentElement.lang = "en";
+    };
+  }, [lang, rtl]);
+
+  const changeLang = (value: Lang) => {
+    localStorage.setItem(LANG_KEY, value);
+    setLang(value);
+  };
+
+  const footerLink: CSSProperties = { color: C.muted };
 
   return (
-    <div className="min-h-screen bg-background text-foreground flex flex-col">
-      {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
-        <div className="container flex items-center justify-between h-16 md:h-20">
-          <div className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center">
-              <Sparkles className="w-6 h-6 text-accent-foreground" />
-            </div>
-            <span className="font-display font-bold text-xl text-foreground">TattooLab</span>
-          </div>
-          <div className="hidden md:flex items-center gap-8">
-            <Link href="/" className="text-sm hover:text-accent transition-colors">Home</Link>
-            <Link href="/privacy" className="text-sm hover:text-accent transition-colors">Privacy</Link>
-            <Link href="/terms" className="text-sm hover:text-accent transition-colors">Terms</Link>
-            <Link href="/support" className="text-sm hover:text-accent transition-colors">Support</Link>
-            <Link href="/auth">
-              <Button variant="outline" className="border-accent/30 hover:bg-accent/10">Sign In</Button>
-            </Link>
-          </div>
-        </div>
-      </nav>
+    <div dir={rtl ? "rtl" : "ltr"} lang={lang} style={{ minHeight: "100vh", background: C.bg, color: "#fff", overflowX: "clip", fontFamily: "Urbanist, system-ui, sans-serif" }}>
+      <a href="#main" className="tl-skip">
+        Skip to content
+      </a>
 
-      {/* Hero Section */}
-      <section className="relative py-16 md:py-32 px-4 overflow-hidden">
-        {/* Decorative background element */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl -z-10"></div>
-
-        <div className="container max-w-4xl mx-auto text-center">
-          <div className="mb-8 inline-block">
-            <div className="px-4 py-2 rounded-full bg-card border border-accent/30 text-sm text-accent font-medium">
-              ✨ AI-Powered Tattoo Design Studio
-            </div>
-          </div>
-
-          <h1 className="font-display text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            TattooLab
-          </h1>
-
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto font-light">
-            AI Tattoo Creator, Design Studio, Aging Simulator, Cover-Up Advisor, and Tattoo Care
-          </p>
-
-          <p className="text-base md:text-lg text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
-            Visualize your tattoo ideas with AI-powered design tools. Explore how your design will age, get expert cover-up advice, and access professional tattoo care guidance—all in one beautiful app.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <a
-              href={appStoreUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 py-4 bg-accent text-accent-foreground font-semibold rounded-lg hover:bg-accent/90 transition-all duration-200 hover:shadow-lg hover:shadow-accent/20"
-            >
-              <Smartphone className="w-5 h-5 mr-2" />
-              Download on App Store
-            </a>
-            <a
-              href={`mailto:${supportEmail}`}
-              className="inline-flex items-center justify-center px-8 py-4 bg-card border border-accent/30 text-foreground font-semibold rounded-lg hover:bg-card/80 hover:border-accent/50 transition-all duration-200"
-            >
-              <Mail className="w-5 h-5 mr-2" />
-              Contact Support
-            </a>
-          </div>
-
-          <div className="text-sm text-muted-foreground">
-            Subscriptions managed through Apple In-App Purchases
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-16 md:py-24 px-4 bg-card/40">
-        <div className="container max-w-5xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">
-              Powerful Features
-            </h2>
-            <p className="text-muted-foreground text-lg">
-              Everything you need to design, visualize, and care for your tattoos
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6 md:gap-8">
-            {/* Feature 1: Design Studio */}
-            <Link href="/design">
-              <Card className="p-8 h-full bg-background border-border/50 hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/10 cursor-pointer group">
-                <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <Sparkles className="w-6 h-6 text-accent" />
-                </div>
-                <h3 className="font-display text-2xl font-bold mb-3 group-hover:text-accent transition-colors">Design Studio</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Create stunning tattoo designs with AI assistance. Explore unlimited variations and refine your ideas until they're perfect.
-                </p>
-              </Card>
-            </Link>
-
-            {/* Feature 2: Aging Simulator */}
-            <Link href="/aging">
-              <Card className="p-8 h-full bg-background border-border/50 hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/10 cursor-pointer group">
-                <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <Clock className="w-6 h-6 text-accent" />
-                </div>
-                <h3 className="font-display text-2xl font-bold mb-3 group-hover:text-accent transition-colors">Aging Simulator</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  See how your tattoo will look over time. Our AI predicts aging patterns to help you make informed design choices.
-                </p>
-              </Card>
-            </Link>
-
-            {/* Feature 3: Cover-Up Advisor */}
-            <Link href="/cover-up">
-              <Card className="p-8 h-full bg-background border-border/50 hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/10 cursor-pointer group">
-                <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <Shield className="w-6 h-6 text-accent" />
-                </div>
-                <h3 className="font-display text-2xl font-bold mb-3 group-hover:text-accent transition-colors">Cover-Up Advisor</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Get expert recommendations for covering up existing tattoos. Our AI analyzes your current design and suggests creative solutions.
-                </p>
-              </Card>
-            </Link>
-
-            {/* Feature 4: TattooCare */}
-            <Link href="/care">
-              <Card className="p-8 h-full bg-background border-border/50 hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/10 cursor-pointer group">
-                <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <Smartphone className="w-6 h-6 text-accent" />
-                </div>
-                <h3 className="font-display text-2xl font-bold mb-3 group-hover:text-accent transition-colors">TattooCare</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Professional aftercare guidance and tips to keep your tattoo looking fresh. Follow personalized care routines for optimal results.
-                </p>
-              </Card>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Divider */}
-      <Separator className="bg-border/50" />
-
-      {/* Support Section */}
-      <section className="py-16 md:py-24 px-4">
-        <div className="container max-w-2xl mx-auto text-center">
-          <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">
-            Need Help?
-          </h2>
-          <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-            We're here to support you. Reach out with any questions about TattooLab or your subscription.
-          </p>
-          <a
-            href={`mailto:${supportEmail}`}
-            className="inline-flex items-center justify-center px-8 py-4 bg-accent text-accent-foreground font-semibold rounded-lg hover:bg-accent/90 transition-all duration-200"
-          >
-            <Mail className="w-5 h-5 mr-2" />
-            {supportEmail}
+      <header
+        style={{
+          position: "sticky",
+          top: 0,
+          zIndex: 20,
+          background: "rgba(18,18,18,.82)",
+          backdropFilter: "blur(14px)",
+          WebkitBackdropFilter: "blur(14px)",
+          borderBottom: `1px solid ${C.hairline}`,
+        }}
+      >
+        <nav
+          aria-label="Main"
+          style={{ maxWidth: 1200, margin: "0 auto", padding: "14px clamp(20px,5vw,64px)", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16 }}
+        >
+          <a href="#top" aria-label="TattooLab home">
+            <Wordmark size={19} />
           </a>
-        </div>
-      </section>
+          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+            <label style={{ position: "relative", display: "flex", alignItems: "center" }}>
+              <span className="sr-only">Language</span>
+              <select
+                value={lang}
+                onChange={e => changeLang(e.target.value as Lang)}
+                style={{
+                  appearance: "none",
+                  WebkitAppearance: "none",
+                  background: "transparent",
+                  color: "#fff",
+                  border: "1px solid rgba(255,255,255,.14)",
+                  borderRadius: 999,
+                  paddingBlock: 9,
+                  paddingInlineStart: 14,
+                  paddingInlineEnd: 30,
+                  font: "500 12px 'JetBrains Mono', monospace",
+                  letterSpacing: ".12em",
+                }}
+              >
+                {LANGS.map(l => (
+                  <option key={l.code} value={l.code} style={{ background: C.panel }}>
+                    {l.label}
+                  </option>
+                ))}
+              </select>
+              <span aria-hidden="true" style={{ position: "absolute", insetInlineEnd: 12, pointerEvents: "none", fontSize: 9, color: C.muted }}>
+                ▼
+              </span>
+            </label>
+            <a href="#download" className="tl-cta-pill">
+              {t.download}
+            </a>
+          </div>
+        </nav>
+      </header>
 
-      {/* Footer */}
-      <footer className="mt-auto bg-card/40 border-t border-border/50 py-12 px-4">
-        <div className="container max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
-            {/* Brand */}
-            <div>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center">
-                  <Sparkles className="w-6 h-6 text-accent-foreground" />
-                </div>
-                <span className="font-display font-bold text-lg">TattooLab</span>
-              </div>
-              <p className="text-sm text-muted-foreground">
-                AI-powered tattoo design and care studio
+      <main id="main">
+        {/* Hero */}
+        <section
+          id="top"
+          aria-labelledby="hero-h"
+          style={{
+            maxWidth: 1200,
+            margin: "0 auto",
+            padding: "clamp(56px,9vw,120px) clamp(20px,5vw,64px) clamp(80px,10vw,140px)",
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit,minmax(min(100%,440px),1fr))",
+            gap: "clamp(56px,6vw,80px)",
+            alignItems: "center",
+          }}
+        >
+          <Reveal style={{ display: "flex", flexDirection: "column", gap: 28 }}>
+            <span style={{ ...mono(11, ".22em"), textTransform: "uppercase" }}>AI tattoo studio · iOS</span>
+            <h1
+              id="hero-h"
+              style={{ margin: 0, fontWeight: 700, fontSize: "clamp(44px,6.4vw,84px)", lineHeight: 1.02, letterSpacing: "-.035em", textWrap: "balance" }}
+            >
+              {t.h1pre}
+              <Serif style={{ letterSpacing: "-.01em", fontSize: "1.08em" }}>{t.h1em}</Serif>
+              {t.h1post}
+            </h1>
+            <p style={{ margin: 0, fontSize: "clamp(17px,1.6vw,20px)", lineHeight: 1.5, color: C.muted, maxWidth: "30em", textWrap: "pretty" }}>{t.sub}</p>
+            <div style={{ display: "flex", flexDirection: "column", gap: 14, alignItems: "flex-start" }}>
+              <AppStoreBadge />
+              <span style={{ fontSize: 13, color: C.muted }}>{t.note}</span>
+            </div>
+          </Reveal>
+
+          <Reveal style={{ display: "flex", justifyContent: "center", position: "relative", padding: "20px 0" }}>
+            <div
+              aria-hidden="true"
+              style={{
+                position: "absolute",
+                width: "70%",
+                aspectRatio: "1",
+                borderRadius: "50%",
+                background: "radial-gradient(circle,rgba(255,94,26,.22),rgba(255,94,26,0) 65%)",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%,-50%)",
+              }}
+            />
+            <div
+              style={{
+                position: "relative",
+                width: "min(300px,72vw)",
+                aspectRatio: "300/620",
+                borderRadius: 52,
+                background: "#0A0A0A",
+                border: "1px solid rgba(255,255,255,.14)",
+                padding: 10,
+                boxShadow: "0 40px 80px rgba(0,0,0,.6),inset 0 0 0 2px #222",
+                transform: `rotate(${rtl ? 6 : -6}deg)`,
+              }}
+            >
+              <img
+                src="/images/app-home.jpg"
+                alt="TattooLab app home screen on iPhone"
+                style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: 42, display: "block" }}
+              />
+            </div>
+          </Reveal>
+        </section>
+
+        <IdeaSection />
+        <HealSection />
+        <AgeSection rtl={rtl} />
+
+        {/* 05 Cover */}
+        <section id="cover" aria-labelledby="cover-h" style={{ borderTop: `1px solid ${C.hairline}` }}>
+          <div style={{ ...sectionInner, display: "flex", flexDirection: "column", gap: "clamp(40px,5vw,64px)" }}>
+            <Reveal style={{ display: "flex", flexDirection: "column", gap: 20, maxWidth: 720 }}>
+              <span style={mono(12, ".2em")}>05 COVER</span>
+              <h2 id="cover-h" style={h2Style}>
+                Every old tattoo can become the <Serif>beginning.</Serif>
+              </h2>
+              <p style={{ margin: 0, fontSize: 18, lineHeight: 1.55, color: C.muted, maxWidth: "30em" }}>
+                Photograph the piece you've outgrown. The cover-up advisor reads its density and colour, then suggests designs that can actually hide
+                it.
               </p>
-            </div>
+            </Reveal>
+            <Reveal
+              style={{
+                display: "grid",
+                gridTemplateColumns: wide ? "minmax(0,1fr) 64px minmax(0,1fr)" : "minmax(0,1fr)",
+                gap: 20,
+                alignItems: "center",
+                maxWidth: wide ? 900 : 440,
+                width: "100%",
+                margin: "0 auto",
+              }}
+            >
+              {[
+                { src: "/images/coverup-before.jpg", alt: "Photo of an old, faded tattoo", cap: "BEFORE" },
+                null,
+                { src: "/images/coverup-after.jpg", alt: "Suggested cover-up design placed over the old tattoo", cap: "AFTER · SUGGESTION" },
+              ].map((item, i) =>
+                item ? (
+                  <figure key={i} style={{ margin: 0, display: "flex", flexDirection: "column", gap: 14 }}>
+                    <div style={{ position: "relative", aspectRatio: "4/5", borderRadius: 28, overflow: "hidden", background: C.peach }}>
+                      <img src={item.src} alt={item.alt} loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                    </div>
+                    <figcaption style={mono(11, ".14em")}>{item.cap}</figcaption>
+                  </figure>
+                ) : (
+                  <div key={i} aria-hidden="true" style={{ display: "flex", justifyContent: "center", fontSize: 28, color: C.muted }}>
+                    <span style={{ display: "inline-block", transform: wide ? (rtl ? "scaleX(-1)" : "none") : "rotate(90deg)" }}>→</span>
+                  </div>
+                ),
+              )}
+            </Reveal>
+          </div>
+        </section>
 
-            {/* Legal Links */}
-            <div>
-              <h4 className="font-semibold mb-4 text-sm uppercase tracking-wide text-accent">Legal</h4>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="/privacy" className="text-sm text-muted-foreground hover:text-accent transition-colors">
-                    Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/terms" className="text-sm text-muted-foreground hover:text-accent transition-colors">
-                    Terms of Service
-                  </Link>
-                </li>
-              </ul>
-            </div>
+        {/* Trust strip */}
+        <section aria-label="Privacy and availability" style={{ borderTop: `1px solid ${C.hairline}`, borderBottom: `1px solid ${C.hairline}` }}>
+          <Reveal
+            as="ul"
+            style={{
+              maxWidth: 1200,
+              margin: "0 auto",
+              padding: "clamp(48px,6vw,72px) clamp(20px,5vw,64px)",
+              listStyle: "none",
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit,minmax(min(100%,260px),1fr))",
+              gap: 32,
+            }}
+          >
+            <TrustItem label="No account needed">
+              <circle cx="18" cy="15" r="4" />
+              <path d="M11 25c1.5-3.5 4-5 7-5s5.5 1.5 7 5" />
+              <path d="M10 10l16 16" />
+            </TrustItem>
+            <TrustItem label="Photos are used only for your result">
+              <rect x="12" y="16" width="12" height="9" rx="2" />
+              <path d="M14.5 16v-2.5a3.5 3.5 0 0 1 7 0V16" />
+            </TrustItem>
+            <TrustItem label="Available in 7 languages">
+              <circle cx="18" cy="18" r="8" />
+              <path d="M10 18h16M18 10c2.5 2.5 2.5 13.5 0 16M18 10c-2.5 2.5-2.5 13.5 0 16" />
+            </TrustItem>
+          </Reveal>
+        </section>
 
-            {/* Support */}
-            <div>
-              <h4 className="font-semibold mb-4 text-sm uppercase tracking-wide text-accent">Support</h4>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="/support" className="text-sm text-muted-foreground hover:text-accent transition-colors">
-                    Help & FAQ
-                  </Link>
-                </li>
-                <li>
-                  <a href={`mailto:${supportEmail}`} className="text-sm text-muted-foreground hover:text-accent transition-colors">
-                    Contact Us
-                  </a>
-                </li>
-              </ul>
+        {/* FAQ */}
+        <section id="faq" aria-labelledby="faq-h">
+          <div style={{ ...sectionInner, maxWidth: 800, display: "flex", flexDirection: "column", gap: 40 }}>
+            <Reveal as="h2" id="faq-h" style={{ margin: 0, fontWeight: 700, fontSize: "clamp(30px,3.6vw,44px)", letterSpacing: "-.03em" }}>
+              Questions, <Serif>answered.</Serif>
+            </Reveal>
+            <div style={{ borderTop: `1px solid ${C.hairline}` }}>
+              {FAQS.map((f, i) => {
+                const open = openFaq === i;
+                return (
+                  <div key={f.q} style={{ borderBottom: `1px solid ${C.hairline}` }}>
+                    <h3 style={{ margin: 0 }}>
+                      <button
+                        type="button"
+                        aria-expanded={open}
+                        aria-controls={`faq-p${i}`}
+                        onClick={() => setOpenFaq(open ? -1 : i)}
+                        style={{
+                          width: "100%",
+                          background: "transparent",
+                          border: 0,
+                          color: "#fff",
+                          padding: "26px 0",
+                          display: "flex",
+                          justifyContent: "space-between",
+                          alignItems: "center",
+                          gap: 20,
+                          font: "600 clamp(17px,1.6vw,20px) Urbanist, sans-serif",
+                          textAlign: "start",
+                        }}
+                      >
+                        <span>{f.q}</span>
+                        <span
+                          aria-hidden="true"
+                          style={{ flex: "none", fontSize: 24, fontWeight: 400, color: C.muted, transition: "transform 240ms ease", transform: `rotate(${open ? 45 : 0}deg)` }}
+                        >
+                          +
+                        </span>
+                      </button>
+                    </h3>
+                    <div
+                      id={`faq-p${i}`}
+                      role="region"
+                      style={{ display: "grid", gridTemplateRows: open ? "1fr" : "0fr", transition: "grid-template-rows 260ms ease", overflow: "hidden" }}
+                    >
+                      <p style={{ margin: 0, minHeight: 0, overflow: "hidden", fontSize: 17, lineHeight: 1.6, color: C.muted, maxWidth: "40em" }}>
+                        <span style={{ display: "block", padding: "0 0 26px" }}>{f.a}</span>
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
+        </section>
 
-          <Separator className="bg-border/50 mb-8" />
+        {/* Final CTA */}
+        <section id="download" aria-labelledby="cta-h" style={{ borderTop: `1px solid ${C.hairline}` }}>
+          <Reveal
+            style={{
+              maxWidth: 1200,
+              margin: "0 auto",
+              padding: "clamp(112px,14vw,200px) clamp(20px,5vw,64px)",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: 40,
+              textAlign: "center",
+            }}
+          >
+            <h2 id="cta-h" style={{ margin: 0, fontWeight: 700, fontSize: "clamp(44px,7vw,104px)", lineHeight: 1, letterSpacing: "-.04em", textWrap: "balance", maxWidth: "12em" }}>
+              {t.ctaPre}
+              <Serif style={{ color: C.orangeSoft, fontSize: "1.08em" }}>{t.ctaEm}</Serif>
+              {t.ctaPost}
+            </h2>
+            <AppStoreBadge large />
+            <span style={{ fontSize: 13, color: C.muted }}>{t.note}</span>
+          </Reveal>
+        </section>
+      </main>
 
-          <div className="text-center text-sm text-muted-foreground">
-            <p>&copy; 2024 TattooLab. All rights reserved.</p>
-            <p className="mt-2">
-              Subscriptions managed through Apple In-App Purchases. See our{" "}
-              <Link href="/terms" className="text-accent hover:underline">
-                Terms of Service
-              </Link>
-              {" "}for details.
-            </p>
-          </div>
+      <footer style={{ borderTop: `1px solid ${C.hairline}` }}>
+        <div
+          style={{
+            maxWidth: 1200,
+            margin: "0 auto",
+            padding: "40px clamp(20px,5vw,64px) 48px",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            gap: 24,
+            flexWrap: "wrap",
+          }}
+        >
+          <Wordmark size={16} />
+          <nav aria-label="Footer" style={{ display: "flex", gap: 24, flexWrap: "wrap", fontSize: 14 }}>
+            <Link href="/support" className="tl-footer-link" style={footerLink}>
+              Support
+            </Link>
+            <Link href="/privacy" className="tl-footer-link" style={footerLink}>
+              Privacy Policy
+            </Link>
+            <Link href="/terms" className="tl-footer-link" style={footerLink}>
+              Terms of Use
+            </Link>
+            <a href={`mailto:${SUPPORT_EMAIL}`} className="tl-footer-link" style={footerLink}>
+              {SUPPORT_EMAIL}
+            </a>
+          </nav>
+          <span style={{ fontSize: 13, color: C.muted }}>© {new Date().getFullYear()} TattooLab</span>
         </div>
       </footer>
     </div>
+  );
+}
+
+function TrustItem({ label, children }: { label: string; children: ReactNode }) {
+  return (
+    <li style={{ display: "flex", alignItems: "center", gap: 16, fontSize: 17, fontWeight: 500 }}>
+      <svg aria-hidden="true" width="36" height="36" viewBox="0 0 36 36" fill="none" stroke={C.muted} strokeWidth="1.5">
+        <circle cx="18" cy="18" r="17" stroke="rgba(255,255,255,.14)" />
+        {children}
+      </svg>
+      {label}
+    </li>
   );
 }
