@@ -1,3 +1,4 @@
+import { SUPPORT_EMAIL } from "@/legal/texts";
 import { Separator } from "@/components/ui/separator";
 import { Card } from "@/components/ui/card";
 import { Sparkles, Mail, ArrowLeft, ChevronDown } from "lucide-react";
@@ -17,7 +18,7 @@ interface FAQItem {
 const faqs: FAQItem[] = [
   {
     question: "How do I restore purchases?",
-    answer: "To restore your purchases, open TattooLab and go to Settings > Account > Restore Purchases. This will restore your subscription and any premium features you've previously purchased. Make sure you're signed in with the same Apple ID you used to make the purchase.",
+    answer: "To restore your purchases, open TattooLab and go to Settings and tap Restore Purchases on your plan card, or use Restore Purchases at the bottom of the Pro screen. This restores an active subscription. Make sure you're signed in with the same Apple ID you used to make the purchase.",
   },
   {
     question: "How do I cancel my subscription?",
@@ -25,27 +26,27 @@ const faqs: FAQItem[] = [
   },
   {
     question: "How do I contact support?",
-    answer: "We're here to help! You can reach our support team by emailing support@tattoolab.app. Please include details about your issue, and we'll respond within 7 business days. For urgent issues, please mark your email as urgent.",
+    answer: "We're here to help! Email us at yakup7312@gmail.com or tap Contact Support in the app's Settings. Please include details about your issue, and we'll respond within 7 business days.",
   },
   {
     question: "How does TattooLab use AI?",
-    answer: "TattooLab uses Google Gemini API to power our AI features. We use AI to generate tattoo design suggestions, predict how designs will age over time, and provide cover-up recommendations. All AI processing happens only after you explicitly consent to it for each request. Your data is processed securely and is never shared without your permission.",
+    answer: "TattooLab uses Google Gemini (through Firebase) to analyze photos and create most images, and Replicate (FLUX) for Design Studio images. Nothing is sent until you agree on the AI consent screen, and you can withdraw consent anytime in Settings. See the Privacy Policy for details.",
   },
   {
     question: "Is my data safe?",
-    answer: "Yes, your data security is our priority. Most of your data is stored locally on your device and encrypted. When we do process data through our AI services, it's done securely and only with your explicit consent. We comply with industry-standard security practices and never share your personal information with third parties without permission.",
+    answer: "Your projects, photos and healing journey are stored only on your device. Photos leave the device only when you run an AI tool after giving consent, over an encrypted connection. We don't sell data or show ads, and you can turn off anonymous usage analytics in Settings.",
   },
   {
     question: "What subscription plans are available?",
-    answer: "TattooLab offers three subscription options: weekly, monthly, and yearly auto-renewable subscriptions. All plans provide access to our full suite of features including Design Studio, Aging Simulator, Cover-Up Advisor, and TattooCare. Pricing varies by region and plan duration.",
+    answer: "TattooLab Pro is available as a weekly or a yearly auto-renewable subscription. Both include a monthly allowance of AI generations across Design Studio, Aging Simulator, Cover-Up Advisor, InkMaster and TattooCare, with a daily fair-use limit. Pricing varies by region.",
   },
   {
     question: "Can I use TattooLab offline?",
     answer: "Yes! Most TattooLab features work offline. Your designs and projects are stored locally on your device. However, AI-powered features like design generation and aging simulation require an internet connection to process your requests through our AI services.",
   },
   {
-    question: "How do I delete my account?",
-    answer: "To delete your account, please contact us at support@tattoolab.app with your request. We'll process your account deletion within 7 business days. Please note that this will delete all your data associated with TattooLab, and this action cannot be undone.",
+    question: "How do I delete my data?",
+    answer: "TattooLab has no accounts, so there is nothing to close. To delete everything the app stores (projects, Care scans, healing journey photos and reminders), go to Settings > Clear All Data, or delete the app. To cancel a subscription, use your Apple ID settings.",
   },
 ];
 
@@ -78,7 +79,7 @@ function FAQItemComponent({ item }: { item: FAQItem }) {
 }
 
 export default function Support() {
-  const supportEmail = "support@tattoolab.app";
+  const supportEmail = SUPPORT_EMAIL;
 
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col">

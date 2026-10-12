@@ -1,8 +1,7 @@
 // Copy and data for the landing page (design: Claude Design "TattooLab.dc.html").
 
-// TODO: replace with the real App Store ID once the listing is live.
-export const APP_STORE_URL = "https://apps.apple.com/app/tattoolab/id0000000000";
-export const SUPPORT_EMAIL = "support@tattoolab.app";
+export const APP_STORE_URL = "https://apps.apple.com/app/tattoolab/id6759400770";
+export { SUPPORT_EMAIL } from "@/legal/texts";
 
 export const PROMPT = "Ginkgo leaves around a crescent moon”";
 export const PROMPT_LABEL = "Ginkgo leaves around a crescent moon";
@@ -61,7 +60,7 @@ export const FACTORS: { id: string; name: string }[] = [
 
 export const FAQS: { q: string; a: string }[] = [
   { q: "How do subscriptions work, and how do I cancel?", a: "TattooLab is free to try. Premium features are a subscription billed through your Apple ID. Cancel any time in Settings → your name → Subscriptions; you keep access until the end of the current period." },
-  { q: "What happens to my photos?", a: "Photos are sent only to produce your result and aren’t stored on external servers after processing. No account is required, so nothing is tied to your identity." },
+  { q: "What happens to my photos?", a: "Your projects and photos stay on your iPhone. When you run an AI tool, and only after you agree, the photo you chose goes to Google (Gemini) or, for Design Studio, to Replicate, both in the US. We keep no copies on our servers. No account is required." },
   { q: "Is the aftercare advice medical advice?", a: "No. Care reports are general guidance. Always follow your artist’s instructions, and see a doctor if you notice redness that spreads, swelling, heat or fever." },
   { q: "Which devices are supported?", a: "iPhone running iOS 17 or later. iPad runs the iPhone version." },
 ];
