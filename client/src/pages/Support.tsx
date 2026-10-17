@@ -30,7 +30,7 @@ const faqs: FAQItem[] = [
   },
   {
     question: "How does TattooLab use AI?",
-    answer: "TattooLab uses Google Gemini (through Firebase) to analyze photos and create most images, and Replicate (FLUX) for Design Studio images. Nothing is sent until you agree on the AI consent screen, and you can withdraw consent anytime in Settings. See the Privacy Policy for details.",
+    answer: "TattooLab uses Google Gemini (through Firebase) to analyze photos and create most images, and Replicate (FLUX) for Design Studio images. Nothing is sent until you start an AI feature yourself. See the Privacy Policy for details.",
   },
   {
     question: "Is my data safe?",
