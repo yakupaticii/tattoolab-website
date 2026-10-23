@@ -11,6 +11,8 @@ import Terms from "./pages/Terms";
 import Support from "./pages/Support";
 import FontGenerator from "./pages/FontGenerator";
 import { IdeaPage, IdeasHub } from "./pages/TattooIdeas";
+import { GuidePage, GuidesHub } from "./pages/TattooGuides";
+import pages from "./seo/pages.json";
 
 
 function Router() {
@@ -24,6 +26,10 @@ function Router() {
       <Route path="/tattoo-font-generator" component={FontGenerator} />
       <Route path="/tattoo-ideas" component={IdeasHub} />
       <Route path="/tattoo-ideas/:slug">{params => <IdeaPage slug={params.slug} />}</Route>
+      <Route path="/tattoo-guides" component={GuidesHub} />
+      {pages.guides.map(g => (
+        <Route key={g.slug} path={g.path}>{() => <GuidePage slug={g.slug} />}</Route>
+      ))}
       <Route path="/404" component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

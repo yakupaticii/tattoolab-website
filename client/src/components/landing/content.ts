@@ -60,7 +60,7 @@ export const FACTORS: { id: string; name: string }[] = [
 
 export const FAQS: { q: string; a: string }[] = [
   { q: "How do subscriptions work, and how do I cancel?", a: "TattooLab is free to try. Premium features are a subscription billed through your Apple ID. Cancel any time in Settings → your name → Subscriptions; you keep access until the end of the current period." },
-  { q: "What happens to my photos?", a: "Your projects and photos stay on your iPhone. When you run an AI tool, and only after you agree, the photo you chose goes to Google (Gemini) or, for Design Studio, to Replicate, both in the US. We keep no copies on our servers. No account is required." },
+  { q: "What happens to my photos?", a: "Your projects and photos stay on your iPhone. When you run an AI tool, the photo you chose goes to Google (Gemini) or, for Design Studio, to Replicate, both in the US. We keep no copies on our servers. No account is required." },
   { q: "Is the aftercare advice medical advice?", a: "No. Care reports are general guidance. Always follow your artist’s instructions, and see a doctor if you notice redness that spreads, swelling, heat or fever." },
   { q: "Which devices are supported?", a: "iPhone running iOS 17 or later. iPad runs the iPhone version." },
 ];

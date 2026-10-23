@@ -357,6 +357,12 @@ export default function Home() {
             <Link href="/tattoo-font-generator" className="tl-footer-link" style={footerLink}>
               Tattoo font generator
             </Link>
+            <Link href="/tattoo-guides" className="tl-footer-link" style={footerLink}>
+              Tattoo guides
+            </Link>
+            <Link href="/tattoo-pain-chart" className="tl-footer-link" style={footerLink}>
+              Tattoo pain chart
+            </Link>
             <Link href="/support" className="tl-footer-link" style={footerLink}>
               Support
             </Link>

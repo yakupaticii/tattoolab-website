@@ -33,32 +33,33 @@ function Wordmark({ size }: { size: number }) {
   );
 }
 
-export function GetAppButton({ campaign, label = "Try it on your skin" }: { campaign: string; label?: string }) {
+export function GetAppButton({ campaign, label = "Try it on your skin", compact = false }: { campaign: string; label?: string; compact?: boolean }) {
   return (
     <a
       href={appStoreLink(campaign)}
       target="_blank"
       rel="noopener noreferrer"
-      style={{ display: "inline-flex", alignItems: "center", gap: 10, background: C.orange, color: "#fff", borderRadius: 999, padding: "12px 22px", fontWeight: 700, fontSize: 15 }}
+      style={{ display: "inline-flex", alignItems: "center", gap: compact ? 6 : 10, background: C.orange, color: "#fff", borderRadius: 999, padding: compact ? "8px 14px" : "12px 22px", fontWeight: 700, fontSize: compact ? 14 : 15, whiteSpace: "nowrap" }}
     >
-      <AppleLogo size={18} />
+      <AppleLogo size={compact ? 15 : 18} />
       {label}
     </a>
   );
 }
 
-const navLink: CSSProperties = { color: "#fff", opacity: 0.82, fontSize: 15, fontWeight: 600 };
+const navLink: CSSProperties = { color: "#fff", opacity: 0.82, fontSize: 14, fontWeight: 600, whiteSpace: "nowrap" };
 
 export default function SeoLayout({ children, campaign }: { children: ReactNode; campaign: string }) {
   return (
     <div style={{ minHeight: "100vh", background: C.bg, color: "#fff", fontFamily: "Urbanist, system-ui, sans-serif", overflowX: "clip" }}>
       <header style={{ position: "sticky", top: 0, zIndex: 20, background: "rgba(18,18,18,.86)", backdropFilter: "blur(14px)", WebkitBackdropFilter: "blur(14px)", borderBottom: `1px solid ${C.hairline}` }}>
-        <nav aria-label="Main" style={{ maxWidth: 1120, margin: "0 auto", padding: "14px clamp(16px,5vw,48px)", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16, flexWrap: "wrap" }}>
-          <Link href="/" aria-label="TattooLab home"><Wordmark size={19} /></Link>
-          <div style={{ display: "flex", alignItems: "center", gap: 18, flexWrap: "wrap" }}>
+        <nav aria-label="Main" style={{ maxWidth: 1120, margin: "0 auto", padding: "12px clamp(14px,5vw,48px)", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10 }}>
+          <Link href="/" aria-label="TattooLab home"><Wordmark size={17} /></Link>
+          <div style={{ display: "flex", alignItems: "center", gap: "clamp(10px,2.5vw,18px)" }}>
             <Link href="/tattoo-ideas" style={navLink}>Ideas</Link>
-            <Link href="/tattoo-font-generator" style={navLink}>Font Generator</Link>
-            <GetAppButton campaign={campaign} label="Get the app" />
+            <Link href="/tattoo-guides" style={navLink}>Guides</Link>
+            <Link href="/tattoo-font-generator" style={navLink}>Fonts</Link>
+            <GetAppButton campaign={campaign} label="Get app" compact />
           </div>
         </nav>
       </header>
@@ -85,6 +86,7 @@ export default function SeoLayout({ children, campaign }: { children: ReactNode;
           <nav aria-label="Footer" style={{ display: "flex", gap: 20, flexWrap: "wrap", color: C.muted }}>
             <Link href="/tattoo-ideas" style={{ color: C.muted }}>Tattoo ideas</Link>
             <Link href="/tattoo-font-generator" style={{ color: C.muted }}>Tattoo font generator</Link>
+            {pages.guides.map(g => <Link key={g.slug} href={g.path} style={{ color: C.muted }}>{g.h1}</Link>)}
             <Link href="/support" style={{ color: C.muted }}>Support</Link>
             <Link href="/privacy" style={{ color: C.muted }}>Privacy</Link>
             <Link href="/terms" style={{ color: C.muted }}>Terms</Link>

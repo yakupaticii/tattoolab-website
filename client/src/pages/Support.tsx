@@ -34,7 +34,7 @@ const faqs: FAQItem[] = [
   },
   {
     question: "Is my data safe?",
-    answer: "Your projects, photos and healing journey are stored only on your device. Photos leave the device only when you run an AI tool after giving consent, over an encrypted connection. We don't sell data or show ads, and you can turn off anonymous usage analytics in Settings.",
+    answer: "Your projects, photos and healing journey are stored only on your device. Photos leave the device only when you run an AI tool yourself, over an encrypted connection. We don't sell data or show ads, and you can turn off anonymous usage analytics in Settings.",
   },
   {
     question: "What subscription plans are available?",
