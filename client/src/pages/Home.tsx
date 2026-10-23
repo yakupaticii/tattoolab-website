@@ -1,4 +1,5 @@
 import { useEffect, useState, type CSSProperties, type ReactNode } from "react";
+import { LanguageLinks } from "@/seo/SeoLayout";
 import { Link } from "wouter";
 import AgeSection from "@/components/landing/AgeSection";
 import HealSection from "@/components/landing/HealSection";
@@ -363,6 +364,9 @@ export default function Home() {
             <Link href="/tattoo-pain-chart" className="tl-footer-link" style={footerLink}>
               Tattoo pain chart
             </Link>
+            <Link href="/tattoo-cost" className="tl-footer-link" style={footerLink}>
+              Tattoo cost
+            </Link>
             <Link href="/support" className="tl-footer-link" style={footerLink}>
               Support
             </Link>
@@ -376,6 +380,7 @@ export default function Home() {
               {SUPPORT_EMAIL}
             </a>
           </nav>
+          <LanguageLinks color={C.muted} />
           <span style={{ fontSize: 13, color: C.muted }}>© {new Date().getFullYear()} TattooLab</span>
         </div>
       </footer>

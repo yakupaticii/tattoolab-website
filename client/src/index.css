@@ -2,7 +2,6 @@
 @import "tw-animate-css";
 
 /* Google Fonts — same faces as the iOS app */
-@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@800;900&family=Urbanist:wght@400;500;600;700&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@500&display=swap');
 
 @custom-variant dark (&:is(.dark *));
 

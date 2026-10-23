@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+      content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#121212" />
     <meta name="description" content="Design your tattoo, watch it heal and see it age — all on your iPhone, before the needle. AI design studio, aging simulator, cover-up advisor and aftercare." />
     <meta name="keywords" content="AI tattoo generator, tattoo design, tattoo ideas, tattoo font generator, try on tattoo, tattoo simulator, cover up tattoo, tattoo app" />
@@ -13,6 +13,13 @@
     <meta property="og:image" content="https://tattoolab.vercel.app/images/og.jpg" />
     <meta name="twitter:image" content="https://tattoolab.vercel.app/images/og.jpg" />
     <meta name="author" content="TattooLab" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/favicon-96.png" type="image/png" sizes="96x96" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@800;900&family=Urbanist:wght@400;500;600;700&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@500&display=swap" />
     
     <!-- Open Graph Tags -->
     <meta property="og:type" content="website" />
@@ -31,15 +38,12 @@
     
     <title>TattooLab — Know your ink before it's permanent</title>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"AI Tattoo Generator: TattooLab","operatingSystem":"iOS","applicationCategory":"DesignApplication","url":"https://tattoolab.vercel.app/","downloadUrl":"https://apps.apple.com/app/id6759400770","description":"Design your tattoo with AI, try it on your skin live through the camera and see how it may age over 30 years.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://tattoolab.vercel.app/#org","name":"TattooLab","url":"https://tattoolab.vercel.app/","logo":"https://tattoolab.vercel.app/icon-512.png","sameAs":["https://apps.apple.com/app/id6759400770"]},{"@type":"WebSite","@id":"https://tattoolab.vercel.app/#website","name":"TattooLab","url":"https://tattoolab.vercel.app/","publisher":{"@id":"https://tattoolab.vercel.app/#org"},"inLanguage":"en"}]}</script>
   </head>
 
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <script
-      defer
-      src="%VITE_ANALYTICS_ENDPOINT%/umami"
-      data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
   </body>
 
 </html>

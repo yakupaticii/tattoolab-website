@@ -67,11 +67,16 @@ export function IdeaPage({ slug }: { slug: string }) {
         <p style={{ margin: 0, color: "#E9E1DB", fontSize: 17, lineHeight: 1.6 }}>{idea.aging}</p>
       </section>
 
-      <h2 style={{ marginTop: 56, fontSize: 26 }}>More tattoo ideas</h2>
+      <h2 style={{ marginTop: 56, fontSize: 26 }}>More tattoo ideas and guides</h2>
       <ul style={{ display: "flex", gap: 10, flexWrap: "wrap", listStyle: "none", padding: 0 }}>
         {others.map(o => (
           <li key={o.slug}>
             <Link href={`/tattoo-ideas/${o.slug}`} style={{ display: "inline-block", border: `1px solid ${C.hairline}`, borderRadius: 999, padding: "10px 16px", color: "#fff" }}>{o.h1}</Link>
+          </li>
+        ))}
+        {pages.guides.filter(g => ["tattoo-placement", "tattoo-styles", "tattoo-pain-chart", "tattoo-cost"].includes(g.slug)).map(g => (
+          <li key={g.slug}>
+            <Link href={g.path} style={{ display: "inline-block", border: `1px solid ${C.hairline}`, borderRadius: 999, padding: "10px 16px", color: "#fff" }}>{g.h1}</Link>
           </li>
         ))}
         <li>

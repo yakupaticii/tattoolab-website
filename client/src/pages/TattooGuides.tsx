@@ -51,6 +51,9 @@ export function GuidePage({ slug }: { slug: string }) {
         <div>
           <h1 style={{ margin: 0, fontSize: "clamp(38px,5.6vw,64px)", lineHeight: 1.02, letterSpacing: "-.03em" }}>{guide.h1}</h1>
           <p style={{ color: C.muted, fontSize: 18, lineHeight: 1.6 }}>{guide.intro}</p>
+          <p style={{ color: C.muted, fontSize: 14, margin: "0 0 18px" }}>
+            By the TattooLab team · Updated <time dateTime={pages.updated}>{new Date(pages.updated).toLocaleDateString("en-US", { month: "long", year: "numeric" })}</time>
+          </p>
           <GetAppButton campaign={campaign} label="Get TattooLab free" />
         </div>
         <img src={guide.image} alt={guide.h1} style={{ width: "100%", maxHeight: 520, objectFit: "cover", borderRadius: 28, background: "#F6EFE7" }} />
@@ -104,7 +107,8 @@ export function GuidePage({ slug }: { slug: string }) {
       <h2 style={{ marginTop: 56, fontSize: 24 }}>Keep reading</h2>
       <ul style={{ display: "flex", gap: 10, flexWrap: "wrap", listStyle: "none", padding: 0 }}>
         {[...pages.guides.filter(g => g.slug !== guide.slug).map(g => ({ href: g.path, label: g.h1 })),
-          { href: "/tattoo-ideas", label: "Tattoo ideas" }, { href: "/tattoo-font-generator", label: "Tattoo font generator" }].map(l => (
+          ...pages.ideas.slice(0, 6).map(i => ({ href: `/tattoo-ideas/${i.slug}`, label: i.h1 })),
+          { href: "/tattoo-font-generator", label: "Tattoo font generator" }].map(l => (
           <li key={l.href}>
             <Link href={l.href} style={{ display: "inline-block", border: `1px solid ${C.hairline}`, borderRadius: 999, padding: "10px 16px", color: "#fff" }}>{l.label}</Link>
           </li>

@@ -3,8 +3,8 @@
   "appStoreId": "6759400770",
   "fontGenerator": {
     "path": "/tattoo-font-generator",
-    "title": "Tattoo Font Generator: Preview Your Name in 18 Tattoo Fonts",
-    "description": "Type a name, date or quote and preview it in 18 tattoo fonts: script, Old English, gothic, blackletter, typewriter and more. Free, instant, no sign-up. Then try it on your skin with TattooLab.",
+    "title": "Tattoo Font Generator: Preview 18 Tattoo Fonts",
+    "description": "Type a name, date or quote and preview it in 18 tattoo fonts: script, gothic, old English, typewriter and fine line. Free, no sign-up.",
     "h1": "Tattoo Font Generator",
     "intro": "Type a name, a date or a short quote and see it in 18 classic tattoo lettering styles. Pick the one that fits, then try it on your skin, live, with the TattooLab app before you book.",
     "tips": [
@@ -16,16 +16,16 @@
   },
   "ideasHub": {
     "path": "/tattoo-ideas",
-    "title": "Tattoo Ideas: Small, Fine Line, Matching, Cover-Up and Flash",
-    "description": "Hand-picked tattoo ideas with placement tips and how each style ages. Browse small, fine line, matching, cover-up and Friday the 13th flash ideas, then try any design on your skin with TattooLab.",
+    "title": "Tattoo Ideas: Small, Minimalist, Forearm and More",
+    "description": "Hand-picked tattoo ideas with placement tips and aging notes: small, fine line, minimalist, forearm, for women, for men, matching and cover-up.",
     "h1": "Tattoo ideas",
     "intro": "Ideas grouped the way people actually plan a tattoo: by size, style and moment. Every idea comes with a placement tip and a note on how it ages, so the design you love today still looks good in 20 years."
   },
   "ideas": [
     {
       "slug": "small",
-      "title": "Small Tattoo Ideas That Age Well (With Placement Tips)",
-      "description": "Small tattoo ideas for wrists, ankles, fingers and behind the ear, with honest notes on how tiny tattoos age. Try any idea on your skin before you ink with TattooLab.",
+      "title": "Small Tattoo Ideas That Age Well",
+      "description": "Small tattoo ideas for wrists, ankles, fingers and behind the ear, with honest notes on how tiny tattoos age. Try any idea on your skin first.",
       "h1": "Small tattoo ideas",
       "intro": "Small tattoos are the most popular first tattoo, and the most likely to blur. The trick is a simple silhouette, enough space inside the lines and a placement that doesn't rub all day.",
       "image": "/images/ideas/rose.jpg",
@@ -59,8 +59,8 @@
     },
     {
       "slug": "fine-line",
-      "title": "Fine Line Tattoo Ideas: Delicate Designs and How They Age",
-      "description": "Fine line tattoo ideas: botanicals, single-line portraits, constellations and script. Learn which fine line designs hold up over time and preview them on your skin with TattooLab.",
+      "title": "Fine Line Tattoo Ideas and How They Age",
+      "description": "Fine line tattoo ideas: botanical sprigs, single-line faces, constellations and script, with sizing tips so delicate lines stay crisp for years.",
       "h1": "Fine line tattoo ideas",
       "intro": "Fine line tattoos use a single thin needle for delicate, sketch-like work. They are beautiful and quick to heal, but they need the right design and placement to stay crisp.",
       "image": "/images/ideas/olive.jpg",
@@ -93,9 +93,149 @@
       "aging": "Fine line work softens faster than bold outlines, especially on hands, feet and areas in the sun. Choose designs with breathing room and protect them with sunscreen; TattooLab's Tattoo Care has a day-by-day healing guide."
     },
     {
+      "slug": "minimalist",
+      "image": "/images/ideas/compass.jpg",
+      "title": "Minimalist Tattoo Ideas With Big Meaning",
+      "description": "Minimalist tattoo ideas: single-line drawings, small symbols, tiny script and geometric shapes, with size and placement tips so they stay sharp.",
+      "h1": "Minimalist tattoo ideas",
+      "intro": "Minimalist tattoos say a lot with very little: one line, one shape, plenty of skin. The secret is a design simple enough to stay clean and big enough not to blur.",
+      "items": [
+        {
+          "name": "Single-line portrait",
+          "text": "A face, a pet or a pair of hands drawn in one continuous line. 6–10 cm on the forearm or upper arm."
+        },
+        {
+          "name": "Wave in a circle",
+          "text": "A single wave or mountain inside a thin circle. Wrist, ankle or behind the ear."
+        },
+        {
+          "name": "Coordinates",
+          "text": "The latitude and longitude of a place that matters, in a small typewriter font along the inner arm."
+        },
+        {
+          "name": "Tiny heart or star",
+          "text": "A finger or wrist classic. Expect a touch-up on fingers after a year or two."
+        },
+        {
+          "name": "Geometric shape",
+          "text": "A triangle or circle with one fine inner line: clean and modern on the inner bicep or ankle."
+        },
+        {
+          "name": "Small symbol",
+          "text": "A semicolon, an infinity sign or an initial, all easy to read at a small size."
+        }
+      ],
+      "aging": "The fewer lines a tattoo has, the more each line matters. Don't go too small: under about 2 cm, lines can merge into a blur within a few years. Leave at least 1 mm between parallel lines."
+    },
+    {
+      "slug": "forearm",
+      "image": "/images/ideas/compass-arm.jpg",
+      "title": "Forearm Tattoo Ideas: Inner and Outer Designs",
+      "description": "Forearm tattoo ideas, from small inner-forearm script to wraparound outer pieces, with sizing tips and how each design ages.",
+      "h1": "Forearm tattoo ideas",
+      "intro": "The forearm is the most popular spot for a tattoo you actually get to see. It is a long, fairly flat canvas with little pain, so vertical designs and wraparound pieces both work well.",
+      "items": [
+        {
+          "name": "Compass and map lines",
+          "text": "A round compass on the outer forearm with faint map lines fading toward the wrist. 10–14 cm."
+        },
+        {
+          "name": "Botanical stem",
+          "text": "A single fern, lavender or wildflower stem along the inner forearm. 12–18 cm, fine line or black and grey."
+        },
+        {
+          "name": "Mountain band",
+          "text": "A mountain range wrapping around the forearm like an armband. Keep the peaks simple so they read from a distance."
+        },
+        {
+          "name": "Snake and dagger",
+          "text": "American traditional with bold outlines: a snake coiling around a blade. Ages beautifully on the outer forearm."
+        },
+        {
+          "name": "Script quote",
+          "text": "One short line in a clean script on the inner forearm, facing you. Compare fonts in the Tattoo Font Generator first."
+        },
+        {
+          "name": "Koi and waves",
+          "text": "A koi swimming up the arm with a few wind bars: the perfect start of a future Japanese sleeve."
+        }
+      ],
+      "aging": "Forearms age well because the skin is stable and doesn't stretch much. The outer forearm gets a lot of sun, so use SPF 50 to keep black lines crisp, and leave space around fine details; tiny gaps close up over the years."
+    },
+    {
+      "slug": "for-women",
+      "image": "/images/ideas/butterfly.jpg",
+      "title": "Tattoo Ideas for Women: Delicate to Bold",
+      "description": "Tattoo ideas for women: fine line florals, butterflies, spine script, sternum and thigh pieces, with placement and aging tips.",
+      "h1": "Tattoo ideas for women",
+      "intro": "From a tiny fine-line symbol to a full ornamental back piece, the best tattoo is the one that fits your body and your story. These are the designs women ask for most, with honest notes on how they age.",
+      "items": [
+        {
+          "name": "Fine line birth flowers",
+          "text": "A small bouquet of birth-month flowers on the forearm or ribs. Keep stems open so they don't merge over time."
+        },
+        {
+          "name": "Spine script or ornament",
+          "text": "A vertical line of script or a dotwork ornament down the spine. 15–25 cm, elegant and easy to hide."
+        },
+        {
+          "name": "Butterfly",
+          "text": "A single butterfly with bold outer wings on the shoulder blade, ankle or back of the arm."
+        },
+        {
+          "name": "Sternum ornament",
+          "text": "Symmetrical mandala and drop shapes with dotwork shading. Higher pain, stunning result."
+        },
+        {
+          "name": "Moon phases",
+          "text": "A row of moon phases across the upper back or running along the forearm."
+        },
+        {
+          "name": "Thigh piece",
+          "text": "A larger floral or snake design on the outer thigh: plenty of room, low pain and easy to cover."
+        }
+      ],
+      "aging": "Fine line work looks delicate but softens over time, so go a little bigger than you think and keep space between lines. A few bolder lines or areas of solid black help floral and ornamental tattoos last much longer."
+    },
+    {
+      "slug": "for-men",
+      "image": "/images/ideas/dragon.jpg",
+      "title": "Tattoo Ideas for Men That Still Look Good at 50",
+      "description": "Tattoo ideas for men: forearm, chest, shoulder and sleeve designs in blackwork, traditional, Japanese and realism, with aging advice.",
+      "h1": "Tattoo ideas for men",
+      "intro": "Great tattoos for men are about scale and style, not clichés. Bold designs that match the size of the body part look strong on day one and stay readable for decades.",
+      "items": [
+        {
+          "name": "Japanese dragon",
+          "text": "A dragon winding over the shoulder and down the upper arm with clouds and wind bars: the start of a great sleeve."
+        },
+        {
+          "name": "Lion or wolf portrait",
+          "text": "Black and grey realism on the outer forearm or chest. Needs at least 12–15 cm for the details to last."
+        },
+        {
+          "name": "Chest piece",
+          "text": "A pair of swallows, an eagle or a symmetrical ornament across the upper chest, in traditional or blackwork."
+        },
+        {
+          "name": "Geometric sleeve",
+          "text": "Interlocking patterns and dotwork built up over several sessions, easy to extend later."
+        },
+        {
+          "name": "Memorial piece",
+          "text": "A name or date combined with a symbol that matters to you: a compass, a clock, a bird."
+        },
+        {
+          "name": "Blackwork armband",
+          "text": "A solid or ornamental black band: timeless, and a smart way to cover old work."
+        }
+      ],
+      "aging": "Bold outlines and solid black fills age best, which is why traditional, Japanese and blackwork are classics. Realism needs size: a portrait that is too small turns into a grey blur within a decade."
+    },
+    {
       "slug": "matching",
-      "title": "Matching Tattoo Ideas for Couples, Friends and Siblings",
-      "description": "Matching tattoo ideas for couples, best friends and siblings: sun and moon, lock and key, coordinates and more. Try both designs on live before you commit with TattooLab.",
+      "title": "Matching Tattoo Ideas for Couples and Friends",
+      "description": "Matching tattoo ideas for couples, best friends and siblings: designs that work as a pair and on their own. Try them on your skin first.",
       "h1": "Matching tattoo ideas",
       "intro": "The best matching tattoos are two halves of one idea: each looks complete on its own and tells the full story together. Pick something that will still feel right years from now.",
       "image": "/images/ideas/butterfly.jpg",
@@ -128,44 +268,9 @@
       "aging": "Matching tattoos rarely age the same way: placement, skin and sun exposure all differ. Make them a little larger than you think and use the same artist so the line weight matches. Try both on live with TattooLab to check size and placement first."
     },
     {
-      "slug": "friday-the-13th-flash",
-      "title": "Friday the 13th Tattoo Flash Ideas (Lucky 13 Designs)",
-      "description": "Friday the 13th flash day ideas: black cats, horseshoes, lucky 13, daggers and clovers. Design your own lucky flash and try it on your skin before you go with TattooLab.",
-      "h1": "Friday the 13th flash ideas",
-      "intro": "On Friday the 13th, tattoo shops celebrate with flash day: small, ready-to-go designs, often around $13 plus tip. Lines get long, so it pays to know what you want before you go.",
-      "image": "/images/ideas/friday-13.jpg",
-      "items": [
-        {
-          "name": "Lucky number 13",
-          "text": "Bold old-school numerals with a banner or stars. The most classic flash day pick."
-        },
-        {
-          "name": "Black cat",
-          "text": "Arched back, yellow eyes, sometimes sitting in a horseshoe. Bad luck turned into a lucky charm."
-        },
-        {
-          "name": "Horseshoe",
-          "text": "Open end up to hold the luck in. Pairs well with a 13 or a few stars."
-        },
-        {
-          "name": "Clover and dagger",
-          "text": "A four-leaf clover pierced by a small dagger: luck with an edge."
-        },
-        {
-          "name": "Dice",
-          "text": "A pair of dice showing six and seven. Small, bold and easy to place."
-        },
-        {
-          "name": "Crescent moon with a face",
-          "text": "Traditional moon in bold outline and yellow fill."
-        }
-      ],
-      "aging": "Traditional flash ages beautifully: bold outlines and solid fills stay readable for decades. In TattooLab's Design Studio, the Friday the 13th Flash pack (Nov 7–13) gives you these ideas in one tap, and Try On Live shows it on your arm in real time."
-    },
-    {
       "slug": "cover-up",
-      "title": "Cover-Up Tattoo Ideas: Turn an Old Tattoo Into New Art",
-      "description": "Cover-up tattoo ideas that work: florals, animals, mandalas and blackwork. Learn how cover-ups are planned, how many sessions they take, and preview ideas over your old tattoo with TattooLab.",
+      "title": "Cover-Up Tattoo Ideas That Actually Work",
+      "description": "Cover-up tattoo ideas for old or faded tattoos: which designs hide old ink best, how much bigger to go and what to discuss with your artist.",
       "h1": "Cover-up tattoo ideas",
       "intro": "A good cover-up doesn't hide the old tattoo, it uses it. Dark, textured designs absorb old lines, and the new piece is usually about two to three times the size of the original.",
       "image": "/images/ideas/back-piece.jpg",
@@ -196,6 +301,41 @@
         }
       ],
       "aging": "Cover-ups often need two to four sessions, and very dark old ink may need a few laser sessions to lighten it first. TattooLab's Cover-Up Advisor analyses a photo of your old tattoo, suggests ideas with difficulty and sessions, and lets you compare before and after."
+    },
+    {
+      "slug": "friday-the-13th-flash",
+      "title": "Friday the 13th Tattoo Flash Ideas",
+      "description": "Friday the 13th flash tattoo ideas: lucky 13s, black cats, horseshoes, daggers and dice, plus tips for flash day at your local shop.",
+      "h1": "Friday the 13th flash ideas",
+      "intro": "On Friday the 13th, tattoo shops celebrate with flash day: small, ready-to-go designs, often around $13 plus tip. Lines get long, so it pays to know what you want before you go.",
+      "image": "/images/ideas/friday-13.jpg",
+      "items": [
+        {
+          "name": "Lucky number 13",
+          "text": "Bold old-school numerals with a banner or stars. The most classic flash day pick."
+        },
+        {
+          "name": "Black cat",
+          "text": "Arched back, yellow eyes, sometimes sitting in a horseshoe. Bad luck turned into a lucky charm."
+        },
+        {
+          "name": "Horseshoe",
+          "text": "Open end up to hold the luck in. Pairs well with a 13 or a few stars."
+        },
+        {
+          "name": "Clover and dagger",
+          "text": "A four-leaf clover pierced by a small dagger: luck with an edge."
+        },
+        {
+          "name": "Dice",
+          "text": "A pair of dice showing six and seven. Small, bold and easy to place."
+        },
+        {
+          "name": "Crescent moon with a face",
+          "text": "Traditional moon in bold outline and yellow fill."
+        }
+      ],
+      "aging": "Traditional flash ages beautifully: bold outlines and solid fills stay readable for decades. In TattooLab's Design Studio, the Friday the 13th Flash pack (Nov 7–13) gives you these ideas in one tap, and Try On Live shows it on your arm in real time."
     }
   ],
   "home": {
@@ -230,8 +370,8 @@
   },
   "guidesHub": {
     "path": "/tattoo-guides",
-    "title": "Tattoo Guides: Pain Chart, Aftercare, Aging and Try-On",
-    "description": "Practical tattoo guides before and after you ink: pain chart by body part, day-by-day aftercare, how tattoos age, AI tattoo design and virtual try-on.",
+    "title": "Tattoo Guides: Styles, Placement, Cost and Aftercare",
+    "description": "Practical tattoo guides: styles, placement, prices, pain chart by body part, aftercare day by day, how tattoos age, AI design and try-on.",
     "h1": "Tattoo guides",
     "intro": "Everything worth knowing before and after you get tattooed, written to help you plan a tattoo you'll still love in 30 years."
   },
@@ -240,8 +380,8 @@
       "slug": "ai-tattoo-generator",
       "path": "/ai-tattoo-generator",
       "image": "/images/design-lines.jpg",
-      "title": "AI Tattoo Generator: Turn Your Idea Into a Tattoo Design",
-      "description": "Describe your idea and get original tattoo designs in seconds: fine line, blackwork, traditional, realism, Japanese and more. Try the design on your skin and print a stencil for your artist with TattooLab.",
+      "title": "AI Tattoo Generator: Turn Any Idea Into a Design",
+      "description": "Describe your idea and get original tattoo designs in seconds: fine line, blackwork, traditional, realism and more. Try it on your skin and print a stencil.",
       "h1": "AI tattoo generator",
       "intro": "An AI tattoo generator turns a short description, or a reference photo, into a tattoo-ready design. Used well, it is the fastest way to explore ideas before you sit down with your artist.",
       "sections": [
@@ -287,8 +427,8 @@
       "slug": "tattoo-try-on",
       "path": "/tattoo-try-on",
       "image": "/images/ideas/try-on-live.jpg",
-      "title": "Virtual Tattoo Try-On: See a Tattoo on Your Body Before You Ink",
-      "description": "Try any tattoo design on your arm, leg, chest or back live through your iPhone camera. Free, on-device virtual tattoo try-on with TattooLab: check size, placement and style before you book.",
+      "title": "Virtual Tattoo Try-On: See It on Your Body First",
+      "description": "See a tattoo on your arm, leg, chest or back live through your iPhone camera. Move, scale and rotate the design before you book your artist.",
       "h1": "Virtual tattoo try-on",
       "intro": "A tattoo is permanent; trying it on shouldn't be. Virtual try-on puts the design on your own skin in real time so you can check size, angle and placement before the first line.",
       "sections": [
@@ -328,8 +468,8 @@
       "slug": "tattoo-aging-simulator",
       "path": "/tattoo-aging-simulator",
       "image": "/images/aging-30.jpg",
-      "title": "Tattoo Aging: What Will My Tattoo Look Like in 10, 20, 30 Years?",
-      "description": "How tattoos age and why: line spread, fading, sun and placement. See your own design after 5, 10, 20 and 30 years with TattooLab's tattoo aging simulator.",
+      "title": "Tattoo Aging: How Will It Look in 10, 20, 30 Years?",
+      "description": "How tattoos age by style, placement and sun exposure, and how to keep yours sharp. Preview your design at 5, 10, 20 and 30 years with TattooLab.",
       "h1": "How tattoos age",
       "intro": "Every tattoo changes. Ink particles slowly spread under the skin, lines soften and colors fade, faster in the sun and on areas that move or rub a lot. Planning for that is the difference between a tattoo that holds up and one that blurs.",
       "sections": [
@@ -374,8 +514,8 @@
       "slug": "tattoo-pain-chart",
       "path": "/tattoo-pain-chart",
       "image": "/images/ideas/compass-arm.jpg",
-      "title": "Tattoo Pain Chart: Least and Most Painful Places to Get Tattooed",
-      "description": "Tattoo pain chart by body part: the least painful places (outer arm, forearm, thigh, calf) and the most painful (ribs, spine, feet, hands). Tips to make your session easier.",
+      "title": "Tattoo Pain Chart: Least to Most Painful Spots",
+      "description": "Tattoo pain by body part, from the outer arm to the ribs, spine and feet, rated 1 to 10, with tips that make a session easier to sit through.",
       "h1": "Tattoo pain chart",
       "intro": "Pain is personal, but most people feel it the same way: areas with more muscle and fat hurt less, and areas over bone, nerves or thin skin hurt more. Use this chart to pick a placement for your first tattoo or plan a big session.",
       "table": {
@@ -488,8 +628,8 @@
       "slug": "tattoo-aftercare",
       "path": "/tattoo-aftercare",
       "image": "/images/ideas/olive.jpg",
-      "title": "Tattoo Aftercare Day by Day: Healing Timeline and Tips",
-      "description": "A day-by-day tattoo aftercare guide: the first 48 hours, peeling and itching in week 1–2, and long-term care. What's normal, what isn't, and how to keep your tattoo sharp.",
+      "title": "Tattoo Aftercare Day by Day: Healing Timeline",
+      "description": "What to do from day 1 to week 6: washing, moisturizing, peeling, itching, sun and swimming, plus the signs that mean you should see a doctor.",
       "h1": "Tattoo aftercare, day by day",
       "intro": "A new tattoo is a healing wound. Most heal on the surface in two to four weeks and fully in about two to three months. Good aftercare keeps it clean, comfortable and sharp. Always follow your artist's instructions first.",
       "table": {
@@ -563,6 +703,665 @@
           "Yes. Peeling and itching in the first two weeks are normal; don't pick at it."
         ]
       ]
+    },
+    {
+      "slug": "tattoo-styles",
+      "path": "/tattoo-styles",
+      "image": "/images/design-stencil.jpg",
+      "title": "Tattoo Styles Explained: 12 Styles and How They Age",
+      "description": "Fine line, blackwork, traditional, Japanese, realism, geometric, watercolor and more: what each tattoo style looks like and how well it ages.",
+      "h1": "Tattoo styles explained",
+      "intro": "Choosing a style is choosing how your tattoo will look on day one and in year thirty. Here are the styles artists are asked for most, what defines them and how each one holds up.",
+      "table": {
+        "head": [
+          "Style",
+          "Look",
+          "How it ages",
+          "Best for"
+        ],
+        "rows": [
+          [
+            "Fine line",
+            "Thin single-needle lines, small scale",
+            "Fair: lines soften and can blur",
+            "Small, delicate pieces in low-friction spots"
+          ],
+          [
+            "Blackwork",
+            "Solid black fills and bold shapes",
+            "Excellent",
+            "Bold statements and cover-ups"
+          ],
+          [
+            "American traditional",
+            "Bold outlines, limited palette of red, yellow, green and black",
+            "Excellent",
+            "Roses, daggers, swallows, flash"
+          ],
+          [
+            "Neo-traditional",
+            "Traditional outlines with richer color and detail",
+            "Very good",
+            "Animals and portraits with ornament"
+          ],
+          [
+            "Japanese (irezumi)",
+            "Large flowing compositions, wind bars and waves",
+            "Excellent",
+            "Sleeves and back pieces"
+          ],
+          [
+            "Black and grey realism",
+            "Smooth shading and photo-like depth",
+            "Good when big enough",
+            "Portraits, statues, wildlife"
+          ],
+          [
+            "Color realism",
+            "Full-color photographic detail",
+            "Good, needs touch-ups",
+            "Large pieces kept out of the sun"
+          ],
+          [
+            "Geometric",
+            "Precise lines, patterns and symmetry",
+            "Good if lines aren't too close",
+            "Mandalas, sacred geometry, armbands"
+          ],
+          [
+            "Dotwork",
+            "Shading built from thousands of dots",
+            "Very good",
+            "Mandalas and ornamental pieces"
+          ],
+          [
+            "Watercolor",
+            "Soft washes, often without outlines",
+            "Fair: edges fade without a black frame",
+            "Abstract and floral pieces"
+          ],
+          [
+            "Minimalist",
+            "Simple shapes and lots of negative space",
+            "Good if not too tiny",
+            "First tattoos and symbols"
+          ],
+          [
+            "Script and lettering",
+            "Words in a chosen typeface",
+            "Depends on letter size and spacing",
+            "Names, dates and quotes"
+          ]
+        ]
+      },
+      "sections": [
+        {
+          "h": "How to choose a style",
+          "p": [
+            "Start with the subject, then pick the style that suits it: a koi works beautifully as irezumi, a pet portrait in black and grey realism, a swallow in American traditional.",
+            "Look at healed work, not fresh photos. Ask artists for pictures of tattoos that are a few years old; that is where styles show their real differences."
+          ],
+          "list": [
+            "Bigger and bolder ages better than smaller and finer.",
+            "Black holds longest; yellow, white and pastel colors fade first.",
+            "Choose an artist who specialises in your style rather than one who does everything."
+          ]
+        },
+        {
+          "h": "Try styles before you commit",
+          "p": [
+            "In TattooLab's Design Studio you can generate the same idea in several styles, try each one on your skin with Try On Live and run it through the Aging Simulator to see which version still reads clearly in 20 years."
+          ]
+        }
+      ],
+      "faq": [
+        [
+          "What is the most popular tattoo style?",
+          "Fine line and minimalist tattoos are the most requested first tattoos right now, while blackwork, traditional and realism remain the most common for larger pieces."
+        ],
+        [
+          "Which tattoo style lasts the longest?",
+          "Styles with bold black outlines and solid fills, like American traditional, blackwork and Japanese, keep their shape the longest."
+        ],
+        [
+          "Can I mix tattoo styles?",
+          "Yes. Neo-traditional is itself a mix, and many artists combine realism with ornamental or geometric elements. Keep one style dominant so the piece stays readable."
+        ]
+      ]
+    },
+    {
+      "slug": "tattoo-placement",
+      "path": "/tattoo-placement",
+      "image": "/images/ideas/compass-arm.jpg",
+      "title": "Tattoo Placement Guide: Size, Pain and Visibility",
+      "description": "The best tattoo placements for small and large designs: how visible each spot is, how much it hurts and which areas fade the fastest.",
+      "h1": "Tattoo placement guide",
+      "intro": "The same design can look perfect on a forearm and awkward on a ribcage. Placement decides how a tattoo flows with your body, how often people see it, how much it hurts and how fast it fades.",
+      "table": {
+        "head": [
+          "Placement",
+          "Good sizes",
+          "Visibility",
+          "Pain",
+          "Fading"
+        ],
+        "rows": [
+          [
+            "Inner forearm",
+            "5–20 cm",
+            "High, easy to show",
+            "Low to medium",
+            "Low"
+          ],
+          [
+            "Outer forearm",
+            "5–25 cm",
+            "High",
+            "Low",
+            "Medium (sun)"
+          ],
+          [
+            "Upper arm and shoulder",
+            "8–30 cm",
+            "Easy to cover",
+            "Low",
+            "Low"
+          ],
+          [
+            "Wrist",
+            "2–6 cm",
+            "High",
+            "Medium",
+            "Medium (friction)"
+          ],
+          [
+            "Fingers",
+            "1–2 cm",
+            "Very high",
+            "Medium",
+            "High, fades fast"
+          ],
+          [
+            "Behind the ear",
+            "1–4 cm",
+            "Medium",
+            "Medium",
+            "Low"
+          ],
+          [
+            "Collarbone",
+            "5–15 cm",
+            "Medium",
+            "Medium to high",
+            "Low"
+          ],
+          [
+            "Ribs and side",
+            "10–30 cm",
+            "Hidden",
+            "High",
+            "Low"
+          ],
+          [
+            "Upper back",
+            "10–40 cm",
+            "Hidden",
+            "Low to medium",
+            "Low"
+          ],
+          [
+            "Thigh",
+            "10–30 cm",
+            "Hidden",
+            "Low to medium",
+            "Low"
+          ],
+          [
+            "Calf",
+            "8–25 cm",
+            "Medium",
+            "Low to medium",
+            "Medium (sun)"
+          ],
+          [
+            "Ankle and foot",
+            "2–10 cm",
+            "Medium",
+            "High",
+            "High (shoes, friction)"
+          ]
+        ]
+      },
+      "sections": [
+        {
+          "h": "Match the design to the body",
+          "p": [
+            "Long, vertical designs like a stem, sword or snake follow the forearm, calf and spine. Round designs such as mandalas and compasses sit well on the shoulder, outer forearm and back of the hand. Wide compositions suit the chest, upper back and thigh."
+          ],
+          "list": [
+            "Follow the muscle: a design that wraps with the arm looks intentional from every angle.",
+            "Leave breathing room around the edges; crowding a joint makes a tattoo look cut off.",
+            "Think ahead: could this spot become part of a sleeve or back piece later?"
+          ]
+        },
+        {
+          "h": "Work, sun and lifestyle",
+          "p": [
+            "If you need to cover tattoos at work, the upper arm, shoulder, back, ribs and thigh are easy to hide. Areas that get a lot of sun, like the outer forearm and calf, fade faster unless you use SPF 50 every time. Hands, fingers and feet rub constantly and usually need touch-ups."
+          ]
+        },
+        {
+          "h": "See the placement before you book",
+          "p": [
+            "Try On Live in TattooLab puts your design on your arm, leg, chest or back through the camera, so you can move, scale and rotate it until the placement feels right. Save the photo and show it to your artist."
+          ]
+        }
+      ],
+      "faq": [
+        [
+          "Where is the best place for a first tattoo?",
+          "The outer upper arm, outer forearm or upper back: low pain, easy healing and easy to cover if you need to."
+        ],
+        [
+          "Which tattoo placements fade the fastest?",
+          "Fingers, hands, feet, lips and any spot that rubs or gets a lot of sun fade the fastest."
+        ],
+        [
+          "Where do tattoos hurt the least?",
+          "Areas with more muscle and fat and fewer nerve endings: the outer upper arm, outer thigh, calf and forearm. See the tattoo pain chart for every body part."
+        ]
+      ]
+    },
+    {
+      "slug": "tattoo-cost",
+      "path": "/tattoo-cost",
+      "image": "/images/ideas/dragon.jpg",
+      "title": "How Much Does a Tattoo Cost? 2026 Price Guide",
+      "description": "Typical 2026 tattoo prices from tiny tattoos to full sleeves, how artists charge, what makes a tattoo more expensive and how much to tip.",
+      "h1": "How much does a tattoo cost?",
+      "intro": "Tattoo prices vary by city, artist and style, but most tattoos fall into predictable ranges. These are typical 2026 prices in the US and Western Europe for a licensed, experienced artist.",
+      "table": {
+        "head": [
+          "Tattoo",
+          "Typical time",
+          "Typical price (US)",
+          "Typical price (Europe)"
+        ],
+        "rows": [
+          [
+            "Tiny (under 5 cm)",
+            "Under 1 hour",
+            "$80–200 (shop minimum)",
+            "€60–150"
+          ],
+          [
+            "Small (5–10 cm)",
+            "1–2 hours",
+            "$150–350",
+            "€100–250"
+          ],
+          [
+            "Medium (10–15 cm)",
+            "2–4 hours",
+            "$300–700",
+            "€200–500"
+          ],
+          [
+            "Large (15 cm and up)",
+            "4–8 hours",
+            "$600–1,500",
+            "€400–1,000"
+          ],
+          [
+            "Half sleeve",
+            "10–20 hours",
+            "$1,500–3,500",
+            "€1,000–2,500"
+          ],
+          [
+            "Full sleeve",
+            "20–40 hours",
+            "$3,000–7,000",
+            "€2,000–5,000"
+          ],
+          [
+            "Back piece",
+            "30–60+ hours",
+            "$4,000–10,000+",
+            "€3,000–7,000+"
+          ]
+        ]
+      },
+      "sections": [
+        {
+          "h": "How tattoo artists charge",
+          "list": [
+            "Shop minimum: most studios charge $80–150 even for a tiny tattoo, because every tattoo needs the same setup and sterile equipment.",
+            "Hourly rate: typically $120–250 per hour in the US and €80–180 in Europe; in-demand artists charge more.",
+            "Flat price: many artists quote a fixed price for small and medium pieces once they see the design.",
+            "Day rate: for big projects, some artists charge a fixed price per session day."
+          ]
+        },
+        {
+          "h": "What makes a tattoo more expensive",
+          "list": [
+            "Size and detail: realism and soft shading take far longer than bold linework.",
+            "Color: full color usually adds 20–40% compared with black and grey.",
+            "Placement: ribs, hands and feet are harder to tattoo and take longer.",
+            "Cover-ups: hiding an old tattoo needs more planning and often more sessions.",
+            "Artist and city: big-city studios and artists with waiting lists cost more."
+          ]
+        },
+        {
+          "h": "Tipping and getting a fair quote",
+          "p": [
+            "In the US a 15–20% tip is standard; in most of Europe tipping is appreciated but optional. Don't choose an artist on price alone: fixing or covering a bad tattoo costs far more than paying for a good one.",
+            "Arrive with a clear design and placement. Planning in TattooLab first, trying the design live on your skin and printing a stencil, makes the consultation shorter and the quote more precise."
+          ]
+        }
+      ],
+      "faq": [
+        [
+          "How much does a small tattoo cost?",
+          "Most small tattoos cost $80–350 in the US (€60–250 in Europe), and many studios have a minimum charge of around $100."
+        ],
+        [
+          "How much does a full sleeve cost?",
+          "A full sleeve usually takes 20–40 hours over several sessions and costs roughly $3,000–7,000 in the US or €2,000–5,000 in Europe."
+        ],
+        [
+          "How much should I tip my tattoo artist?",
+          "In the US, 15–20% of the price is standard. In Europe tipping is optional; a small tip or a good review is always appreciated."
+        ]
+      ]
+    }
+  ],
+  "updated": "2026-10-23",
+  "locales": [
+    {
+      "lang": "tr",
+      "path": "/tr",
+      "name": "Türkçe",
+      "title": "Dövme Tasarla ve Cildinde Canlı Dene | TattooLab",
+      "description": "Dövmeni yapay zekayla tasarla, kamerayla canlı olarak cildinde dene ve 30 yılda nasıl yaşlanacağını gör. Kapatma fikirleri ve bakım rehberi. Ücretsiz.",
+      "h1": "Dövmeni yaptırmadan önce cildinde gör",
+      "intro": "TattooLab fikrini dövme tasarımına dönüştürür, kamerayla canlı olarak koluna yerleştirir, 30 yıl sonra nasıl görüneceğini gösterir ve iyileşme sürecinde sana yol gösterir. İğneden önce emin ol.",
+      "featuresTitle": "Neler yapabilirsin",
+      "faqTitle": "Sık sorulan sorular",
+      "button": "App Store'dan ücretsiz indir",
+      "features": [
+        [
+          "Yapay zeka tasarım stüdyosu",
+          "Fikrini yaz ya da bir fotoğraf ekle; fine line, blackwork, traditional, realizm, Japon ve geometrik stillerde özgün tasarımlar al. Dövmecin için %100 ölçekli şablon yazdır."
+        ],
+        [
+          "Canlı deneme",
+          "Kamerayı koluna, bacağına, göğsüne ya da sırtına tut ve tasarımı gerçek zamanlı olarak cildinde gör."
+        ],
+        [
+          "Yaşlanma simülatörü",
+          "Dövmenin 5, 10, 20 ve 30 yıl sonra nasıl görünebileceğini yerleşime, cilde ve güneşe göre gör."
+        ],
+        [
+          "Kapatma danışmanı",
+          "Eski dövmenin fotoğrafını çek; zorluk derecesi ve tahmini seans sayısıyla kapatma fikirleri al."
+        ],
+        [
+          "InkMaster",
+          "Tasarımının yapay zeka incelemesi: kompozisyon, çizgiler, acı haritası ve yaşlanma."
+        ],
+        [
+          "Dövme bakımı",
+          "İyileşen dövmeni tara ve gün gün bakım rehberini takip et."
+        ]
+      ],
+      "faq": [
+        [
+          "TattooLab ücretsiz mi?",
+          "Uygulamayı indirmek ve canlı denemeyi kullanmak ücretsiz. Yapay zeka tasarımlarını ücretsiz deneyebilirsin; daha fazlası için Pro abonelik var."
+        ],
+        [
+          "Dövmeyi cildimde nasıl denerim?",
+          "Bir tasarım oluştur ya da yükle, Canlı Deneme'ye dokun ve kamerayı vücuduna tut. Boyutunu ve açısını ayarlayıp doğru yeri bul, sonra fotoğrafı kaydet."
+        ],
+        [
+          "Tasarımı dövmecime götürebilir miyim?",
+          "Evet. TattooLab gerçek boyutta şablon yazdırmanı sağlar. Dövmecin onu cildine ve yerleşime göre uyarlar."
+        ]
+      ],
+      "cta": {
+        "h": "İğneden önce",
+        "em": "cildinde gör.",
+        "p": "TattooLab dövmeni yapay zekayla tasarlar, kamerayla canlı olarak cildinde gösterir ve 30 yılda nasıl yaşlanacağını önizler. iPhone'da ücretsiz."
+      }
+    },
+    {
+      "lang": "es",
+      "path": "/es",
+      "name": "Español",
+      "title": "Generador de Tatuajes con IA y Prueba en Vivo | TattooLab",
+      "description": "Diseña tu tatuaje con IA, pruébalo en tu piel en vivo con la cámara y mira cómo envejecerá en 30 años. Ideas de cover-up y cuidados. Gratis.",
+      "h1": "Mira tu tatuaje en tu piel antes de hacértelo",
+      "intro": "TattooLab convierte tu idea en un diseño de tatuaje, lo coloca en tu brazo en vivo con la cámara, te muestra cómo se verá dentro de 30 años y te acompaña durante la cicatrización. Decide con seguridad antes de la aguja.",
+      "featuresTitle": "Lo que puedes hacer",
+      "faqTitle": "Preguntas frecuentes",
+      "button": "Descarga gratis en App Store",
+      "features": [
+        [
+          "Estudio de diseño con IA",
+          "Describe tu idea o añade una foto y recibe diseños originales en fine line, blackwork, tradicional, realismo, japonés y geométrico. Imprime una plantilla a tamaño real para tu tatuador."
+        ],
+        [
+          "Prueba en vivo",
+          "Apunta la cámara a tu brazo, pierna, pecho o espalda y mira el diseño en tu piel en tiempo real."
+        ],
+        [
+          "Simulador de envejecimiento",
+          "Mira cómo podría verse tu tatuaje a los 5, 10, 20 y 30 años según la zona, la piel y el sol."
+        ],
+        [
+          "Asesor de cover-up",
+          "Fotografía un tatuaje antiguo y recibe ideas para cubrirlo, con su dificultad y las sesiones estimadas."
+        ],
+        [
+          "InkMaster",
+          "Una revisión con IA de tu diseño: composición, líneas, mapa de dolor y envejecimiento."
+        ],
+        [
+          "Cuidado del tatuaje",
+          "Escanea un tatuaje en cicatrización y sigue una guía de cuidados día a día."
+        ]
+      ],
+      "faq": [
+        [
+          "¿TattooLab es gratis?",
+          "Descargar la app y usar la prueba en vivo es gratis. Puedes probar los diseños con IA gratis y hay una suscripción Pro para más."
+        ],
+        [
+          "¿Cómo pruebo un tatuaje en mi piel?",
+          "Crea o sube un diseño, toca Prueba en vivo y apunta la cámara a tu cuerpo. Ajusta el tamaño y el giro hasta encontrar el lugar ideal y guarda la foto."
+        ],
+        [
+          "¿Puedo llevar el diseño a mi tatuador?",
+          "Sí. TattooLab imprime una plantilla a tamaño real que tu tatuador adaptará a tu piel y a la zona."
+        ]
+      ],
+      "cta": {
+        "h": "Míralo en tu piel",
+        "em": "antes de tatuarte.",
+        "p": "TattooLab diseña tu tatuaje con IA, lo muestra en tu piel en vivo con la cámara y simula cómo envejecerá en 30 años. Gratis en iPhone."
+      }
+    },
+    {
+      "lang": "de",
+      "path": "/de",
+      "name": "Deutsch",
+      "title": "KI-Tattoo-Generator: Tattoo live ausprobieren | TattooLab",
+      "description": "Entwirf dein Tattoo mit KI, probiere es live auf deiner Haut aus und sieh, wie es in 30 Jahren altert. Cover-up-Ideen und Pflege. Kostenlos.",
+      "h1": "Sieh dein Tattoo auf deiner Haut, bevor du es stechen lässt",
+      "intro": "TattooLab macht aus deiner Idee ein Tattoo-Design, zeigt es live mit der Kamera auf deinem Arm, simuliert, wie es in 30 Jahren aussieht, und begleitet dich durch die Heilung. Entscheide dich sicher, bevor die Nadel kommt.",
+      "featuresTitle": "Was du tun kannst",
+      "faqTitle": "Häufige Fragen",
+      "button": "Kostenlos im App Store laden",
+      "features": [
+        [
+          "KI-Designstudio",
+          "Beschreibe deine Idee oder füge ein Foto hinzu und erhalte eigene Designs in Fine Line, Blackwork, Traditional, Realismus, japanischem und geometrischem Stil. Drucke eine 1:1-Schablone für deinen Tätowierer."
+        ],
+        [
+          "Live ausprobieren",
+          "Richte die Kamera auf Arm, Bein, Brust oder Rücken und sieh das Design in Echtzeit auf deiner Haut."
+        ],
+        [
+          "Alterungssimulator",
+          "Sieh, wie dein Tattoo nach 5, 10, 20 und 30 Jahren aussehen könnte, je nach Stelle, Haut und Sonne."
+        ],
+        [
+          "Cover-up-Berater",
+          "Fotografiere ein altes Tattoo und erhalte Cover-up-Ideen mit Schwierigkeit und geschätzten Sitzungen."
+        ],
+        [
+          "InkMaster",
+          "Eine KI-Bewertung deines Designs: Komposition, Linien, Schmerzkarte und Alterung."
+        ],
+        [
+          "Tattoo-Pflege",
+          "Scanne ein heilendes Tattoo und folge einer Pflegeanleitung Tag für Tag."
+        ]
+      ],
+      "faq": [
+        [
+          "Ist TattooLab kostenlos?",
+          "Download und Live-Ausprobieren sind kostenlos. KI-Designs kannst du gratis testen, für mehr gibt es ein Pro-Abo."
+        ],
+        [
+          "Wie probiere ich ein Tattoo auf meiner Haut aus?",
+          "Erstelle oder lade ein Design, tippe auf Live ausprobieren und richte die Kamera auf deinen Körper. Größe und Drehung anpassen, dann das Foto speichern."
+        ],
+        [
+          "Kann ich das Design zu meinem Tätowierer mitnehmen?",
+          "Ja. TattooLab druckt eine Schablone in Originalgröße, die dein Tätowierer an deine Haut und die Stelle anpasst."
+        ]
+      ],
+      "cta": {
+        "h": "Sieh es auf deiner Haut,",
+        "em": "bevor die Nadel kommt.",
+        "p": "TattooLab entwirft dein Tattoo mit KI, zeigt es live mit der Kamera auf deiner Haut und simuliert, wie es in 30 Jahren altert. Kostenlos fürs iPhone."
+      }
+    },
+    {
+      "lang": "fr",
+      "path": "/fr",
+      "name": "Français",
+      "title": "Générateur de Tatouage IA et Essai en Direct | TattooLab",
+      "description": "Crée ton tatouage avec l'IA, essaie-le en direct sur ta peau et vois comment il vieillira sur 30 ans. Idées de cover-up et soins. Gratuit.",
+      "h1": "Vois ton tatouage sur ta peau avant de le faire",
+      "intro": "TattooLab transforme ton idée en dessin de tatouage, le place en direct sur ton bras avec la caméra, montre à quoi il ressemblera dans 30 ans et t'accompagne pendant la cicatrisation. Décide en toute confiance avant l'aiguille.",
+      "featuresTitle": "Ce que tu peux faire",
+      "faqTitle": "Questions fréquentes",
+      "button": "Télécharger gratuitement sur l'App Store",
+      "features": [
+        [
+          "Studio de création IA",
+          "Décris ton idée ou ajoute une photo et reçois des créations originales en fine line, blackwork, traditionnel, réalisme, japonais et géométrique. Imprime un stencil à taille réelle pour ton tatoueur."
+        ],
+        [
+          "Essai en direct",
+          "Vise ton bras, ta jambe, ton torse ou ton dos avec la caméra et vois le motif sur ta peau en temps réel."
+        ],
+        [
+          "Simulateur de vieillissement",
+          "Vois à quoi ton tatouage pourrait ressembler après 5, 10, 20 et 30 ans selon l'emplacement, la peau et le soleil."
+        ],
+        [
+          "Conseiller cover-up",
+          "Photographie un ancien tatouage et reçois des idées de recouvrement avec la difficulté et le nombre de séances estimé."
+        ],
+        [
+          "InkMaster",
+          "Une analyse IA de ton motif : composition, traits, carte de la douleur et vieillissement."
+        ],
+        [
+          "Soins du tatouage",
+          "Scanne un tatouage en cicatrisation et suis un guide de soins jour après jour."
+        ]
+      ],
+      "faq": [
+        [
+          "TattooLab est-il gratuit ?",
+          "Le téléchargement et l'essai en direct sont gratuits. Tu peux tester les créations IA gratuitement, et un abonnement Pro en offre davantage."
+        ],
+        [
+          "Comment essayer un tatouage sur ma peau ?",
+          "Crée ou importe un motif, touche Essai en direct et vise ton corps avec la caméra. Ajuste la taille et la rotation, puis enregistre la photo."
+        ],
+        [
+          "Puis-je apporter le motif à mon tatoueur ?",
+          "Oui. TattooLab imprime un stencil à taille réelle que ton tatoueur adaptera à ta peau et à l'emplacement."
+        ]
+      ],
+      "cta": {
+        "h": "Vois-le sur ta peau",
+        "em": "avant l'aiguille.",
+        "p": "TattooLab crée ton tatouage avec l'IA, le montre en direct sur ta peau avec la caméra et simule son vieillissement sur 30 ans. Gratuit sur iPhone."
+      }
+    },
+    {
+      "lang": "it",
+      "path": "/it",
+      "name": "Italiano",
+      "title": "Generatore di Tatuaggi IA e Prova dal Vivo | TattooLab",
+      "description": "Disegna il tuo tatuaggio con l'IA, provalo dal vivo sulla pelle e scopri come invecchierà in 30 anni. Idee cover-up e cura. Gratis su iPhone.",
+      "h1": "Guarda il tatuaggio sulla tua pelle prima di farlo",
+      "intro": "TattooLab trasforma la tua idea in un disegno per tatuaggio, lo posiziona dal vivo sul tuo braccio con la fotocamera, mostra come apparirà tra 30 anni e ti guida durante la guarigione. Decidi con sicurezza prima dell'ago.",
+      "featuresTitle": "Cosa puoi fare",
+      "faqTitle": "Domande frequenti",
+      "button": "Scarica gratis su App Store",
+      "features": [
+        [
+          "Studio di design IA",
+          "Descrivi la tua idea o aggiungi una foto e ricevi disegni originali in fine line, blackwork, tradizionale, realistico, giapponese e geometrico. Stampa uno stencil a grandezza reale per il tuo tatuatore."
+        ],
+        [
+          "Prova dal vivo",
+          "Inquadra braccio, gamba, petto o schiena e guarda il disegno sulla tua pelle in tempo reale."
+        ],
+        [
+          "Simulatore di invecchiamento",
+          "Scopri come potrebbe apparire il tatuaggio dopo 5, 10, 20 e 30 anni in base a zona, pelle ed esposizione al sole."
+        ],
+        [
+          "Consulente cover-up",
+          "Fotografa un vecchio tatuaggio e ricevi idee per coprirlo con difficoltà e sedute stimate."
+        ],
+        [
+          "InkMaster",
+          "Una valutazione IA del tuo disegno: composizione, linee, mappa del dolore e invecchiamento."
+        ],
+        [
+          "Cura del tatuaggio",
+          "Scansiona un tatuaggio in guarigione e segui una guida alla cura giorno per giorno."
+        ]
+      ],
+      "faq": [
+        [
+          "TattooLab è gratis?",
+          "Scaricare l'app e usare la prova dal vivo è gratis. Puoi provare i design IA gratuitamente e c'è un abbonamento Pro per averne di più."
+        ],
+        [
+          "Come provo un tatuaggio sulla mia pelle?",
+          "Crea o carica un disegno, tocca Prova dal vivo e inquadra il tuo corpo. Regola dimensione e rotazione, poi salva la foto."
+        ],
+        [
+          "Posso portare il disegno al mio tatuatore?",
+          "Sì. TattooLab stampa uno stencil a grandezza reale che il tatuatore adatterà alla tua pelle e alla zona."
+        ]
+      ],
+      "cta": {
+        "h": "Guardalo sulla tua pelle",
+        "em": "prima dell'ago.",
+        "p": "TattooLab disegna il tuo tatuaggio con l'IA, lo mostra dal vivo sulla tua pelle con la fotocamera e simula come invecchierà in 30 anni. Gratis su iPhone."
+      }
     }
   ]
 }

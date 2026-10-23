@@ -12,6 +12,7 @@ import Support from "./pages/Support";
 import FontGenerator from "./pages/FontGenerator";
 import { IdeaPage, IdeasHub } from "./pages/TattooIdeas";
 import { GuidePage, GuidesHub } from "./pages/TattooGuides";
+import LocalHome from "./pages/LocalHome";
 import pages from "./seo/pages.json";
 
 
@@ -29,6 +30,9 @@ function Router() {
       <Route path="/tattoo-guides" component={GuidesHub} />
       {pages.guides.map(g => (
         <Route key={g.slug} path={g.path}>{() => <GuidePage slug={g.slug} />}</Route>
+      ))}
+      {pages.locales.map(l => (
+        <Route key={l.lang} path={l.path}>{() => <LocalHome lang={l.lang} />}</Route>
       ))}
       <Route path="/404" component={NotFound} />
       {/* Final fallback route */}
