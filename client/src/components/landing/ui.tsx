@@ -2,17 +2,17 @@ import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from 
 import { APP_STORE_URL } from "./content";
 
 export const C = {
-  bg: "#121212",
-  panel: "#1C1C1C",
+  bg: "#07080a",
+  panel: "#101318",
   orange: "#FF5E1A",
   orangeSoft: "#FF8A4C",
-  muted: "#A39A94",
+  muted: "#9aa2ad",
   hairline: "rgba(255,255,255,.08)",
   peach: "linear-gradient(135deg,#EBBE9F,#C98563)",
 };
 
 export const mono = (size = 11, tracking = ".18em"): CSSProperties => ({
-  font: `500 ${size}px 'JetBrains Mono', monospace`,
+  font: `500 ${size}px 'Space Mono', monospace`,
   letterSpacing: tracking,
   color: C.muted,
 });
