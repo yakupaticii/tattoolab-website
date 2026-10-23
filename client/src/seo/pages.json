@@ -1,0 +1,111 @@
+{
+  "site": "https://tattoolab.vercel.app",
+  "appStoreId": "6759400770",
+  "fontGenerator": {
+    "path": "/tattoo-font-generator",
+    "title": "Tattoo Font Generator: Preview Your Name in 18 Tattoo Fonts",
+    "description": "Type a name, date or quote and preview it in 18 tattoo fonts: script, Old English, gothic, blackletter, typewriter and more. Free, instant, no sign-up. Then try it on your skin with TattooLab.",
+    "h1": "Tattoo Font Generator",
+    "intro": "Type a name, a date or a short quote and see it in 18 classic tattoo lettering styles. Pick the one that fits, then try it on your skin, live, with the TattooLab app before you book.",
+    "tips": [
+      "Script fonts look elegant small, but leave space between letters: lines that sit too close blur together as a tattoo ages.",
+      "Old English and blackletter read best at 4 cm tall or more.",
+      "Typewriter and clean serif fonts suit dates, coordinates and short quotes.",
+      "Print your favourite at 100% and bring it to your artist: they will adjust the letterforms to your skin and placement."
+    ]
+  },
+  "ideasHub": {
+    "path": "/tattoo-ideas",
+    "title": "Tattoo Ideas: Small, Fine Line, Matching, Cover-Up and Flash",
+    "description": "Hand-picked tattoo ideas with placement tips and how each style ages. Browse small, fine line, matching, cover-up and Friday the 13th flash ideas, then try any design on your skin with TattooLab.",
+    "h1": "Tattoo ideas",
+    "intro": "Ideas grouped the way people actually plan a tattoo: by size, style and moment. Every idea comes with a placement tip and a note on how it ages, so the design you love today still looks good in 20 years."
+  },
+  "ideas": [
+    {
+      "slug": "small",
+      "title": "Small Tattoo Ideas That Age Well (With Placement Tips)",
+      "description": "Small tattoo ideas for wrists, ankles, fingers and behind the ear, with honest notes on how tiny tattoos age. Try any idea on your skin before you ink with TattooLab.",
+      "h1": "Small tattoo ideas",
+      "intro": "Small tattoos are the most popular first tattoo, and the most likely to blur. The trick is a simple silhouette, enough space inside the lines and a placement that doesn't rub all day.",
+      "image": "/images/ideas/rose.jpg",
+      "items": [
+        { "name": "Single-stem rose", "text": "A long stem with two leaves keeps the design open. Inner forearm or ankle, about 6–8 cm." },
+        { "name": "Crescent moon and star", "text": "Two shapes, almost no detail: one of the few designs that still reads clearly at 2 cm. Behind the ear or wrist." },
+        { "name": "Olive branch", "text": "A slight curve follows the bone of the wrist or collarbone. Keep at least 1 mm between leaves." },
+        { "name": "Tiny butterfly", "text": "Choose bold outer wings and skip fine inner patterns; they fill in over the years." },
+        { "name": "Paper plane", "text": "Clean triangles and a dotted trail. Works on the side of a finger, though finger tattoos fade faster." },
+        { "name": "Initials in typewriter font", "text": "Two letters, 1–1.5 cm tall, on the inner wrist. Try fonts with the Tattoo Font Generator first." }
+      ],
+      "aging": "Very small, detailed tattoos are the first to blur. If you love a design, go up one size: 8 cm instead of 5 keeps lines readable for decades. TattooLab's Aging Simulator shows how your exact design may look after 10, 20 and 30 years."
+    },
+    {
+      "slug": "fine-line",
+      "title": "Fine Line Tattoo Ideas: Delicate Designs and How They Age",
+      "description": "Fine line tattoo ideas: botanicals, single-line portraits, constellations and script. Learn which fine line designs hold up over time and preview them on your skin with TattooLab.",
+      "h1": "Fine line tattoo ideas",
+      "intro": "Fine line tattoos use a single thin needle for delicate, sketch-like work. They are beautiful and quick to heal, but they need the right design and placement to stay crisp.",
+      "image": "/images/ideas/olive.jpg",
+      "items": [
+        { "name": "Botanical sprig", "text": "Lavender, olive or eucalyptus along the forearm. The natural spacing between leaves is ideal for fine line." },
+        { "name": "Single-line face", "text": "One continuous line drawing a profile. Keep it at least 7 cm tall so the line stays clean." },
+        { "name": "Constellation", "text": "Dots and thin connecting lines on the shoulder blade or ribs. Ask for slightly larger dots so they don't fade." },
+        { "name": "Script word", "text": "A word in a light script along the collarbone. Preview the letter spacing in the Tattoo Font Generator." },
+        { "name": "Geometric compass", "text": "Fine lines with a few bolder accents give depth without crowding." },
+        { "name": "Wave line", "text": "A minimalist ocean wave on the ankle or wrist." }
+      ],
+      "aging": "Fine line work softens faster than bold outlines, especially on hands, feet and areas in the sun. Choose designs with breathing room and protect them with sunscreen; TattooLab's Tattoo Care has a day-by-day healing guide."
+    },
+    {
+      "slug": "matching",
+      "title": "Matching Tattoo Ideas for Couples, Friends and Siblings",
+      "description": "Matching tattoo ideas for couples, best friends and siblings: sun and moon, lock and key, coordinates and more. Try both designs on live before you commit with TattooLab.",
+      "h1": "Matching tattoo ideas",
+      "intro": "The best matching tattoos are two halves of one idea: each looks complete on its own and tells the full story together. Pick something that will still feel right years from now.",
+      "image": "/images/ideas/butterfly.jpg",
+      "items": [
+        { "name": "Sun and moon", "text": "One sun, one moon, same line weight. Inner wrists, so they meet when you hold hands." },
+        { "name": "Lock and key", "text": "A classic for couples. Keep both pieces the same size and style." },
+        { "name": "Two paper planes", "text": "Great for long-distance friendships: same plane, flying in opposite directions." },
+        { "name": "Coordinates", "text": "The place you met, in a typewriter font. Simple, personal and readable." },
+        { "name": "Two halves of a heart", "text": "A single-line heart split down the middle, one half each." },
+        { "name": "Siblings' birth flowers", "text": "Each person gets their own birth flower in the same style, so the set grows with the family." }
+      ],
+      "aging": "Matching tattoos rarely age the same way: placement, skin and sun exposure all differ. Make them a little larger than you think and use the same artist so the line weight matches. Try both on live with TattooLab to check size and placement first."
+    },
+    {
+      "slug": "friday-the-13th-flash",
+      "title": "Friday the 13th Tattoo Flash Ideas (Lucky 13 Designs)",
+      "description": "Friday the 13th flash day ideas: black cats, horseshoes, lucky 13, daggers and clovers. Design your own lucky flash and try it on your skin before you go with TattooLab.",
+      "h1": "Friday the 13th flash ideas",
+      "intro": "On Friday the 13th, tattoo shops celebrate with flash day: small, ready-to-go designs, often around $13 plus tip. Lines get long, so it pays to know what you want before you go.",
+      "image": "/images/ideas/friday-13.jpg",
+      "items": [
+        { "name": "Lucky number 13", "text": "Bold old-school numerals with a banner or stars. The most classic flash day pick." },
+        { "name": "Black cat", "text": "Arched back, yellow eyes, sometimes sitting in a horseshoe. Bad luck turned into a lucky charm." },
+        { "name": "Horseshoe", "text": "Open end up to hold the luck in. Pairs well with a 13 or a few stars." },
+        { "name": "Clover and dagger", "text": "A four-leaf clover pierced by a small dagger: luck with an edge." },
+        { "name": "Dice", "text": "A pair of dice showing six and seven. Small, bold and easy to place." },
+        { "name": "Crescent moon with a face", "text": "Traditional moon in bold outline and yellow fill." }
+      ],
+      "aging": "Traditional flash ages beautifully: bold outlines and solid fills stay readable for decades. In TattooLab's Design Studio, the Friday the 13th Flash pack (Nov 7–13) gives you these ideas in one tap, and Try On Live shows it on your arm in real time."
+    },
+    {
+      "slug": "cover-up",
+      "title": "Cover-Up Tattoo Ideas: Turn an Old Tattoo Into New Art",
+      "description": "Cover-up tattoo ideas that work: florals, animals, mandalas and blackwork. Learn how cover-ups are planned, how many sessions they take, and preview ideas over your old tattoo with TattooLab.",
+      "h1": "Cover-up tattoo ideas",
+      "intro": "A good cover-up doesn't hide the old tattoo, it uses it. Dark, textured designs absorb old lines, and the new piece is usually about two to three times the size of the original.",
+      "image": "/images/ideas/back-piece.jpg",
+      "items": [
+        { "name": "Peonies and roses", "text": "Layered petals and dark shading hide old script and small symbols well." },
+        { "name": "Animal portrait", "text": "A wolf, lion or tiger with dense fur texture covers tribal and faded black work." },
+        { "name": "Mandala", "text": "Symmetric and dense; great over round or centered old tattoos." },
+        { "name": "Dragon or koi", "text": "Japanese styles with waves and scales can cover a large area in one flowing design." },
+        { "name": "Blackwork band", "text": "For very dark old tattoos, a solid geometric band is often the cleanest answer." },
+        { "name": "Feathers and wings", "text": "Directional texture follows the old lines and breaks up their shape." }
+      ],
+      "aging": "Cover-ups often need two to four sessions, and very dark old ink may need a few laser sessions to lighten it first. TattooLab's Cover-Up Advisor analyses a photo of your old tattoo, suggests ideas with difficulty and sessions, and lets you compare before and after."
+    }
+  ]
+}

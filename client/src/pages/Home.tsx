@@ -351,6 +351,12 @@ export default function Home() {
         >
           <Wordmark size={16} />
           <nav aria-label="Footer" style={{ display: "flex", gap: 24, flexWrap: "wrap", fontSize: 14 }}>
+            <Link href="/tattoo-ideas" className="tl-footer-link" style={footerLink}>
+              Tattoo ideas
+            </Link>
+            <Link href="/tattoo-font-generator" className="tl-footer-link" style={footerLink}>
+              Tattoo font generator
+            </Link>
             <Link href="/support" className="tl-footer-link" style={footerLink}>
               Support
             </Link>

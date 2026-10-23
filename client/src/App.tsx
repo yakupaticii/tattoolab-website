@@ -9,6 +9,8 @@ import Privacy from "./pages/Privacy";
 import Kvkk from "./pages/Kvkk";
 import Terms from "./pages/Terms";
 import Support from "./pages/Support";
+import FontGenerator from "./pages/FontGenerator";
+import { IdeaPage, IdeasHub } from "./pages/TattooIdeas";
 
 
 function Router() {
@@ -19,6 +21,9 @@ function Router() {
       <Route path="/kvkk" component={Kvkk} />
       <Route path="/terms" component={Terms} />
       <Route path="/support" component={Support} />
+      <Route path="/tattoo-font-generator" component={FontGenerator} />
+      <Route path="/tattoo-ideas" component={IdeasHub} />
+      <Route path="/tattoo-ideas/:slug">{params => <IdeaPage slug={params.slug} />}</Route>
       <Route path="/404" component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
