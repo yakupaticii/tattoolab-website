@@ -13,6 +13,7 @@ import FontGenerator from "./pages/FontGenerator";
 import { IdeaPage, IdeasHub } from "./pages/TattooIdeas";
 import { GuidePage, GuidesHub } from "./pages/TattooGuides";
 import LocalHome from "./pages/LocalHome";
+import { DesignPage, DesignsHub } from "./pages/TattooDesigns";
 import pages from "./seo/pages.json";
 
 
@@ -28,6 +29,8 @@ function Router() {
       <Route path="/tattoo-ideas" component={IdeasHub} />
       <Route path="/tattoo-ideas/:slug">{params => <IdeaPage slug={params.slug} />}</Route>
       <Route path="/tattoo-guides" component={GuidesHub} />
+      <Route path="/tattoo-designs" component={DesignsHub} />
+      <Route path="/tattoo-designs/:id">{params => <DesignPage id={params.id} />}</Route>
       {pages.guides.map(g => (
         <Route key={g.slug} path={g.path}>{() => <GuidePage slug={g.slug} />}</Route>
       ))}

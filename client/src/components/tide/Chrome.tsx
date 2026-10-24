@@ -62,7 +62,8 @@ export function SiteHeader({ campaign }: { campaign: string }) {
       <nav aria-label="Main" className="td-wrap" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, paddingBlock: 12 }}>
         <Link href="/" aria-label="TattooLab home"><Wordmark size={17} /></Link>
         <div style={{ display: "flex", alignItems: "center", gap: "clamp(12px,2.6vw,26px)" }}>
-          <Link href="/tattoo-ideas" style={navLink}>Ideas</Link>
+          <Link href="/tattoo-designs" style={navLink}>Designs</Link>
+          <Link href="/tattoo-ideas" className="td-nav-opt" style={navLink}>Ideas</Link>
           <Link href="/tattoo-guides" style={navLink}>Guides</Link>
           <Link href="/tattoo-font-generator" className="td-nav-opt" style={navLink}>Fonts</Link>
           <StoreButton campaign={`${campaign}-nav`} label="Get app" small />
@@ -93,7 +94,7 @@ export function SiteFooter() {
         </div>
         {col("Tattoo ideas", pages.ideas.map(i => [`/tattoo-ideas/${i.slug}`, i.h1]))}
         {col("Guides", pages.guides.map(g => [g.path, g.h1]))}
-        {col("TattooLab", [["/tattoo-font-generator", "Tattoo font generator"], ["/tattoo-ideas", "All tattoo ideas"], ["/tattoo-guides", "All guides"], ["/support", "Support"], ["/privacy", "Privacy"], ["/terms", "Terms"]])}
+        {col("TattooLab", [["/tattoo-designs", "120 tattoo designs"], ["/tattoo-font-generator", "Tattoo font generator"], ["/tattoo-ideas", "All tattoo ideas"], ["/tattoo-guides", "All guides"], ["/support", "Support"], ["/privacy", "Privacy"], ["/terms", "Terms"]])}
       </div>
       <div className="td-wrap" style={{ paddingBlock: "0 40px", display: "flex", gap: 20, justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", fontSize: 13, color: "var(--mist)" }}>
         <nav aria-label="Languages" style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>

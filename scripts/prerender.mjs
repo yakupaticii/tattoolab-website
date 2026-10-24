@@ -51,7 +51,7 @@ const faqLd = faq => ld({
 
 const appLink = c => `https://apps.apple.com/app/apple-store/id${pages.appStoreId}?ct=${c}&amp;mt=8`;
 const cta = c => `<p><a href="${appLink(c)}">Try it on your skin with TattooLab (free on the App Store)</a></p>`;
-const nav = `<nav><a href="/">TattooLab</a> · <a href="/tattoo-ideas">Tattoo ideas</a> · <a href="/tattoo-guides">Tattoo guides</a> · <a href="/tattoo-font-generator">Tattoo font generator</a></nav>`;
+const nav = `<nav><a href="/">TattooLab</a> · <a href="/tattoo-designs">Tattoo designs</a> · <a href="/tattoo-ideas">Tattoo ideas</a> · <a href="/tattoo-guides">Tattoo guides</a> · <a href="/tattoo-font-generator">Tattoo font generator</a></nav>`;
 
 const routes = [];
 const home = pages.home;
@@ -121,6 +121,28 @@ for (const l of pages.locales) {
     body: `${nav}<main><h1>${esc(l.h1)}</h1><p>${esc(l.intro)}</p><h2>${esc(l.featuresTitle)}</h2>${l.features
       .map(([h, t]) => `<h3>${esc(h)}</h3><p>${esc(t)}</p>`).join("")}<h2>${esc(l.faqTitle)}</h2>${l.faq
       .map(([q, a]) => `<h3>${esc(q)}</h3><p>${esc(a)}</p>`).join("")}<p><a href="${appLink(`web-home-${l.lang}`)}">${esc(l.button)}</a></p></main>`,
+  }));
+}
+
+// Tattoo designs: hub + one page per Explore design.
+const designs = JSON.parse(fs.readFileSync(path.join(root, "client/src/seo/designs.json"), "utf8"));
+routes.push(render({
+  route: "/tattoo-designs", title: "120 Tattoo Designs With Meanings: Try Any On Your Skin",
+  description: "Browse 120 original tattoo designs, from luna moths and koi to swallows and phoenixes, with their meaning, best placement and how they age. Try any of them on your skin free in TattooLab.",
+  body: `${nav}<main><h1>Tattoo designs</h1>${designs.categories.map(c => `<h2>${esc(c.name)}</h2><ul>${designs.designs.filter(d => d.category === c.id)
+    .map(d => `<li><a href="/tattoo-designs/${d.id}">${esc(d.name)} tattoo</a></li>`).join("")}</ul>`).join("")}${cta("web-designs")}</main>`,
+}));
+for (const d of designs.designs) {
+  const route = `/tattoo-designs/${d.id}`;
+  const title = `${d.name} Tattoo: Meaning & Free Try-On`;
+  const description = `${d.meaning.split(". ")[0]}. See where a ${d.name.toLowerCase()} tattoo works best, how ${d.style.toLowerCase()} ages, and try it on your skin free.`.slice(0, 158);
+  const art = ld({ "@context": "https://schema.org", "@type": "VisualArtwork", name: `${d.name} tattoo design`, artform: "Tattoo design",
+    artMedium: d.style, image: `${site}${d.image}`, description: d.meaning, creator: { "@type": "Organization", name: "TattooLab" } });
+  routes.push(render({
+    route, title, description, image: d.image, head: art,
+    body: `${nav}<main><h1>${esc(d.name)} tattoo</h1><img src="${d.image}" alt="${esc(d.name)} tattoo design" width="800" height="800"><p>An original ${esc(d.style.toLowerCase())} design of ${esc(d.subject)}. See it on your own skin through the camera before you book, free in TattooLab.</p>
+      <h2>What a ${esc(d.name.toLowerCase())} tattoo means</h2><p>${esc(d.meaning)}</p><h2>Placement and size</h2><p>${esc(d.placementText)}</p>
+      <h2>Style and how it ages</h2><p>${esc(d.styleText)} ${esc(d.aging)}</p>${cta(`web-design-${d.id}`)}${breadcrumb([["Tattoo designs", "/tattoo-designs"], [d.name, route]])}</main>`,
   }));
 }
 
